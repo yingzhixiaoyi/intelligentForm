@@ -1,13 +1,16 @@
 import { type ComponentConfigModel } from "@epic-designer/utils";
 export default {
-  component: () => import("ant-design-vue/lib/switch"),
+  // component: () => import("ant-design-vue/lib/switch"),
+  component: () => import("./index.vue"),
   defaultSchema: {
     label: "开关",
     type: "switch",
     icon: "epic-icon-kaiguan3",
     field: "switch",
     input: true,
-    componentProps: {},
+    componentProps: {
+      defaultValue:false
+    },
   },
   config: {
     attribute: [

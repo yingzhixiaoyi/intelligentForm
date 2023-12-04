@@ -1,13 +1,9 @@
 {
-  "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lib": "pnpm run build --filter epic-designer",
     "lint": "turbo run lint",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "dependencies": {
@@ -36,5 +32,5 @@
     "vue-tsc": "^1.8.6"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "new-turbo"
+  "name": "justin-turbo"
 }
