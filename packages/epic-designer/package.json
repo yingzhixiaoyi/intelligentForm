@@ -1,13 +1,12 @@
 {
-  "name": "epic-designer",
-  "private": false,
-  "version": "0.8.14",
+  "name": "justin-intelligent-orm",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/epic-designer/index.d.ts",
   "description": "基于vue3的设计器,可视化开发页面表单",
-  "author": "kchengz",
+  "author": "justin",
   "keywords": [
     "form",
     "epic-designer",
@@ -20,11 +19,11 @@
     "工作流"
   ],
   "bugs": {
-    "url": "https://github.com/Kchengz/epic-designer/issues"
+    "url": "https://github.com/yingzhixiaoyi/intelligentForm"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kchengz/epic-designer"
+    "url": "https://github.com/yingzhixiaoyi/intelligentForm"
   },
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",

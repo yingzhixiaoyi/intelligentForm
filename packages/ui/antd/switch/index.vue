@@ -19,7 +19,6 @@ const props = defineProps({
     default: () => ({})
   }
 })
-console.log(props.record,20)
 </script>
 <style scoped lang="less">
 

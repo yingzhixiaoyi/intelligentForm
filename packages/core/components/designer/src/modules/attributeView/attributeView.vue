@@ -51,14 +51,14 @@ watch(() => designer.state.checkedNode?.type, () => {
   const attribute = componentConfings[type]?.config.attribute ?? []
 
   componentAttributes.value = [
-    {
+ /*   {
       label: '组件ID',
       type: 'input',
       field: 'id',
       componentProps: {
         disabled: true
       }
-    },
+    },*/
     ...attribute
   ]
 

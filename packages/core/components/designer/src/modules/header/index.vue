@@ -12,7 +12,7 @@
 
     <div class="epic-header-item flex-1 flex justify-center text-12px text-#3d3d3d">
       <slot name="title">
-        epic-designer默认项目
+        编辑项目
       </slot>
     </div>
     <div class="epic-header-item flex-1 flex justify-end items-center">

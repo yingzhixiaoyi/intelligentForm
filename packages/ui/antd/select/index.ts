@@ -19,6 +19,9 @@ export default {
         }
       ],
       listHeight:256,
+      style: {
+        "width": "100%"
+      },
       placeholder: '请选择',
       placement: 'bottomLeft'
     }
@@ -71,11 +74,11 @@ export default {
         },
         field: "componentProps.size",
       },
-      {
-        label: 'label包装到value中',
-        type: 'switch',
-        field: 'componentProps.labelInValue'
-      },
+      // {
+      //   label: 'label包装到value中',
+      //   type: 'switch',
+      //   field: 'componentProps.labelInValue'
+      // },
       {
         label: '设置弹窗高度',
         type: 'number',

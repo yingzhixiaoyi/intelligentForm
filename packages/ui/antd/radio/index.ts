@@ -1,6 +1,7 @@
 import { type ComponentConfigModel } from '@epic-designer/utils'
 export default {
-  component: () => import('ant-design-vue/lib/radio/Group'),
+  // component: () => import('ant-design-vue/lib/radio/Group'),
+  component: () =>  import("./index.vue"),
   defaultSchema: {
     label: '单选框',
     type: 'radio',
@@ -11,14 +12,15 @@ export default {
       options: [
         {
           label: '选项1',
-          value: '选项1'
+          value: 1
         },
         {
           label: '选项2',
-          value: '选项2'
+          value: 2
         }
       ],
-      optionType: 'default'
+      optionType: 'default',
+      defaultValue:0,
     }
   },
   config: {
