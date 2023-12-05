@@ -1,6 +1,6 @@
 {
-  "name": "justin-intelligent-orm",
-  "version": "0.0.3",
+  "name": "justin-intelligent-form",
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",

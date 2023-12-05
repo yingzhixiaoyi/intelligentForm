@@ -10,7 +10,7 @@ export default {
         icon: "epic-icon-liebiao",
         input: false,
         componentProps: {
-            size: 'h4'
+            size: 'h4',
         }
     },
     config: {
@@ -54,6 +54,30 @@ export default {
                     ]
                 },
                 field: "componentProps.size"
+            },
+            {
+                label: "对齐方式",
+                type: "select",
+                componentProps: {
+                    placeholder: "请选择",
+                    allowClear: !0,
+                    options: [
+                        {
+                            label: "左对齐",
+                            value: "left"
+                        },
+                        {
+                            label: "居中对齐",
+                            value: "center"
+                        },
+                        {
+                            label: "右对齐",
+                            value: "right"
+                        },
+
+                    ]
+                },
+                field: "componentProps.align"
             },
         ],
     },

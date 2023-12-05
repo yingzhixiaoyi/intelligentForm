@@ -20,7 +20,6 @@ export default {
         }
       ],
       optionType: 'default',
-      defaultValue:0,
     }
   },
   config: {

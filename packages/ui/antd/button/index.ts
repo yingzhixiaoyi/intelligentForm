@@ -53,6 +53,30 @@ export default {
         field: 'componentProps.type'
       },
       {
+        label: "对齐方式",
+        type: "select",
+        componentProps: {
+          placeholder: "请选择",
+          allowClear: !0,
+          options: [
+            {
+              label: "左对齐",
+              value: ""
+            },
+            {
+              label: "居中对齐",
+              value: "display:block;margin-left:auto;margin-right:auto"
+            },
+            {
+              label: "右对齐",
+              value: "display:block;margin-left:auto"
+            },
+
+          ]
+        },
+        field: "componentProps.class"
+      },
+      {
         label: '链接',
         type: 'input',
         field: 'componentProps.href',
