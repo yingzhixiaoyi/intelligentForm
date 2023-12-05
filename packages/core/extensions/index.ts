@@ -39,6 +39,13 @@ export function setupComponent (pluginManager: PluginManager): void {
     component: async () =>
       await import('../components/designer/src/modules/outline/outline.vue')
   })
+  pluginManager.registerActivitybar({
+    id: 'template',
+    title: '模板',
+    icon: 'epic-icon-juxingkaobei',
+    component: async () =>
+      await import('../components/designer/src/modules/template/template.vue')
+  })
 
   pluginManager.registerRightSidebar({
     id: 'attribute_view',
