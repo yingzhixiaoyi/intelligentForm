@@ -5,6 +5,7 @@
     <div @click="handleGetData">
       改变disabled状态
     </div>
+    <button @click="setFormData">赋值</button>
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import {ref, onMounted} from 'vue'
 import {EBuilder, PageManager, PageSchema} from '@epic-designer/core'
 import {pluginManager} from "@epic-designer/utils";
+
 let pageSchema = ref<PageSchema>({
   "schemas": [
     {
@@ -375,7 +377,21 @@ async function handleGetData() {
 }
 
 
-
+async function setFormData() {
+  let obj = {
+    "switch_beo1j8a5": false,
+    "input_6rw3ozc2": "1",
+    "select_mqm93lk5": "选项2",
+    "radio_vx9jtpuk": 2,
+    "checkbox_yws0v3pa": [
+      "选项2"
+    ],
+    "slider_e51uux3d": 11,
+    "textarea_rc1v4r07": "11"
+  }
+  kfb.value.setData(obj)
+  pluginManager.setFormData(pageSchema.value, obj)
+}
 
 function handleReady(pageManager: PageManager) {
   console.log(pageManager, 75)

@@ -319,7 +319,7 @@ export class PluginManager {
      * 改变disabled状态
      *
      */
-    changeDisabled(data, type) {
+    changeDisabled(data:any, type:any) {
         if (Object.prototype.toString.call(data) === '[object Array]') {
             data.forEach(item => this.changeDisabled(item, type))
         } else if (Object.prototype.toString.call(data) === '[object Object]') {
@@ -331,6 +331,31 @@ export class PluginManager {
             }
             if (data['schemas']) {
                 this.changeDisabled(data['schemas'], type)
+            }
+        }
+    }
+
+    /**
+     * setFormData 方法
+     *
+     */
+    setFormData(data:any, value:any) {
+        if (Object.prototype.toString.call(data) === '[object Array]') {
+            data.forEach(item => this.setFormData(item, value))
+        } else if (Object.prototype.toString.call(data) === '[object Object]') {
+            if (data['componentProps'] && data['componentProps']['disabled']) {
+                console.log('disabled状态下不可编辑')
+                return;
+            }
+            if (value.hasOwnProperty(data['id'])) {
+                data['componentProps']['defaultValue'] = value[data['id']]
+                return
+            }
+            if (data['children']) {
+                this.setFormData(data['children'], value)
+            }
+            if (data['schemas']) {
+                this.setFormData(data['schemas'], value)
             }
         }
     }
