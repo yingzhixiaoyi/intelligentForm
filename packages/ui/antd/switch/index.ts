@@ -89,5 +89,5 @@ export default {
       },
     ],
   },
-  bindModel: "value",
+  bindModel: "checked",
 } as ComponentConfigModel;
