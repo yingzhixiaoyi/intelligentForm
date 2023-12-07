@@ -1,12 +1,12 @@
 <template>
   <div v-if="props.record.label==='单选框'">
-    <Group v-model:value="props.record.componentProps.defaultValue">
+    <Group v-model:value="props.record.componentProps.defaultValue"  v-bind="props.record?.componentProps">
       <Radio v-for="item in props.record.componentProps.options" :value="item.value" :key="item.value">
         {{ item.label }}
       </Radio>
     </Group>
   </div>
-  <Group v-else></Group>
+  <Group v-else  v-bind="props.record?.componentProps"></Group>
 </template>
 <script setup lang="ts">
 import {PropType} from 'vue'

@@ -314,6 +314,26 @@ export class PluginManager {
     resetModulesMethod(data: PageSchema): void {
         this.modulesList.value = []
     }
+
+    /**
+     * 改变disabled状态
+     *
+     */
+    changeDisabled(data, type) {
+        if (Object.prototype.toString.call(data) === '[object Array]') {
+            data.forEach(item => this.changeDisabled(item, type))
+        } else if (Object.prototype.toString.call(data) === '[object Object]') {
+            if (data['componentProps']) {
+                data['componentProps']['disabled'] = type
+            }
+            if (data['children']) {
+                this.changeDisabled(data['children'], type)
+            }
+            if (data['schemas']) {
+                this.changeDisabled(data['schemas'], type)
+            }
+        }
+    }
 }
 
 export const pluginManager = new PluginManager();
