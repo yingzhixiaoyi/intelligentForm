@@ -2,10 +2,11 @@
   <div>
     <EBuilder ref="kfb" :pageSchema="pageSchema" @ready="handleReady">
     </EBuilder>
-    <div @click="handleGetData">
+    <button @click="handleGetData">
       改变disabled状态
-    </div>
+    </button>
     <button @click="setFormData">赋值</button>
+    <button @click="clearValidate">清空校验</button>
   </div>
 </template>
 
@@ -14,15 +15,19 @@ import {ref, onMounted} from 'vue'
 import {EBuilder, PageManager, PageSchema} from '@epic-designer/core'
 import {pluginManager} from "@epic-designer/utils";
 
+pluginManager.addPublicMethod({
+  methodName: 'formSubmit',
+  method: handleGetData
+})
 let pageSchema = ref<PageSchema>({
   "schemas": [
     {
       "type": "page",
       "id": "root",
-      "label": "问卷调查",
+      "label": "页面",
       "children": [
         {
-          "label": "测试问卷",
+          "label": "测试题型一",
           "type": "card",
           "icon": "epic-icon-qiapian",
           "children": [
@@ -58,52 +63,42 @@ let pageSchema = ref<PageSchema>({
                       "type": "col",
                       "children": [
                         {
-                          "label": "姓名",
+                          "label": "输入框",
                           "type": "input",
-                          "field": "input_6rw3ozc2",
+                          "field": "input_bhcgsgen",
                           "icon": "epic-icon-write",
                           "input": true,
                           "componentProps": {
                             "bordered": true,
-                            "placeholder": "请输入",
-                            "style": {},
-                            "disabled": true
+                            "placeholder": "请输入"
                           },
-                          "id": "input_6rw3ozc2",
+                          "id": "input_bhcgsgen",
                           "rules": [
                             {
                               "required": true,
                               "message": "必填项",
                               "type": "string",
                               "trigger": [
-                                "change"
+                                "change",
+                                "blur"
                               ]
                             }
                           ]
-                        }
-                      ],
-                      "componentProps": {
-                        "span": 12
-                      },
-                      "id": "col_lnbrmigk"
-                    },
-                    {
-                      "type": "col",
-                      "children": [
+                        },
                         {
-                          "label": "性别",
+                          "label": "选择框",
                           "type": "select",
                           "icon": "epic-icon-xiala",
-                          "field": "select_mqm93lk5",
+                          "field": "select_wx91d4hp",
                           "input": true,
                           "componentProps": {
                             "options": [
                               {
-                                "label": "男",
+                                "label": "选项1",
                                 "value": "选项1"
                               },
                               {
-                                "label": "女",
+                                "label": "选项2",
                                 "value": "选项2"
                               }
                             ],
@@ -112,248 +107,249 @@ let pageSchema = ref<PageSchema>({
                               "width": "100%"
                             },
                             "placeholder": "请选择",
-                            "placement": "bottomLeft",
-                            "disabled": true
+                            "placement": "bottomLeft"
                           },
-                          "id": "select_mqm93lk5",
+                          "id": "select_wx91d4hp",
                           "rules": [
                             {
                               "required": true,
                               "message": "必填项",
                               "type": "string",
                               "trigger": [
+                                "change",
+                                "blur"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "单选框",
+                          "type": "radio",
+                          "icon": "epic-icon-danxuan-cuxiantiao",
+                          "field": "radio_jshg5j2d",
+                          "input": true,
+                          "componentProps": {
+                            "options": [
+                              {
+                                "label": "选项1",
+                                "value": 1
+                              },
+                              {
+                                "label": "选项2",
+                                "value": 2
+                              }
+                            ],
+                            "optionType": "default"
+                          },
+                          "id": "radio_jshg5j2d",
+                          "rules": [
+                            {
+                              "required": true,
+                              "message": "必填项",
+                              "type": "number",
+                              "trigger": [
                                 "change"
                               ]
                             }
                           ]
+                        },
+                        {
+                          "label": "时间选择器",
+                          "type": "time",
+                          "icon": "epic-icon-time",
+                          "field": "time_xa0lkx0f",
+                          "input": true,
+                          "componentProps": {
+                            "valueFormat": "HH:mm:ss",
+                            "size": "middle",
+                            "placement": "bottomLeft",
+                            "placeholder": "请输入"
+                          },
+                          "id": "time_xa0lkx0f",
+                          "rules": [
+                            {
+                              "required": true,
+                              "message": "必填项",
+                              "type": "string",
+                              "trigger": [
+                                "change",
+                                "blur"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "按钮",
+                          "type": "button",
+                          "field": "button_y9eye9c9",
+                          "icon": "epic-icon-button-remove",
+                          "input": false,
+                          "componentProps": {
+                            "type": "primary",
+                            "class": "display:block;margin-left:auto;margin-right:auto",
+                            "style": {
+                              "width": "20%"
+                            }
+                          },
+                          "id": "button_y9eye9c9",
+                          "on": {
+                            "click": [
+                              {
+                                "type": "component",
+                                "methodName": "validate",
+                                "componentId": "form_dql3iva7"
+                              },
+                              {
+                                "type": "custom",
+                                "methodName": "submit",
+                                "componentId": null
+                              }
+                            ]
+                          }
                         }
                       ],
                       "componentProps": {
                         "span": 12
                       },
-                      "id": "col_qvvvp5ej"
+                      "id": "col_14cskv4i"
+                    },
+                    {
+                      "type": "col",
+                      "children": [
+                        {
+                          "label": "数字输入框",
+                          "type": "number",
+                          "icon": "epic-icon-number",
+                          "field": "number_ip5j4rkm",
+                          "input": true,
+                          "componentProps": {
+                            "style": {
+                              "width": "100%"
+                            },
+                            "placeholder": "请输入"
+                          },
+                          "id": "number_ip5j4rkm",
+                          "rules": [
+                            {
+                              "required": true,
+                              "message": "必填项",
+                              "type": "number",
+                              "trigger": [
+                                "change",
+                                "blur"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "多选框",
+                          "type": "checkbox",
+                          "icon": "epic-icon-duoxuan1",
+                          "field": "checkbox_49kjkee9",
+                          "input": true,
+                          "componentProps": {
+                            "options": [
+                              {
+                                "label": "选项1",
+                                "value": "选项1"
+                              },
+                              {
+                                "label": "选项2",
+                                "value": "选项2"
+                              }
+                            ]
+                          },
+                          "id": "checkbox_49kjkee9",
+                          "rules": [
+                            {
+                              "required": true,
+                              "message": "必填项",
+                              "type": "array",
+                              "trigger": [
+                                "change",
+                                "blur"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "日期选择器",
+                          "type": "date",
+                          "icon": "epic-icon-calendar",
+                          "field": "date_elta6rlt",
+                          "input": true,
+                          "componentProps": {
+                            "valueFormat": "YYYY-MM-DD",
+                            "type": "date",
+                            "placeholder": "请选择"
+                          },
+                          "id": "date_elta6rlt",
+                          "rules": [
+                            {
+                              "required": true,
+                              "message": "必填项",
+                              "type": "string",
+                              "trigger": [
+                                "change",
+                                "blur"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "滑块",
+                          "type": "slider",
+                          "icon": "epic-icon-menu",
+                          "field": "slider_wr8i00xb",
+                          "input": true,
+                          "id": "slider_wr8i00xb",
+                          "rules": [
+                            {
+                              "required": true,
+                              "message": "必填项",
+                              "type": "number",
+                              "trigger": [
+                                "change",
+                                "blur"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "按钮",
+                          "type": "button",
+                          "field": "button_1822yyuk",
+                          "icon": "epic-icon-button-remove",
+                          "input": false,
+                          "componentProps": {},
+                          "id": "button_1822yyuk",
+                          "on": {
+                            "click": [
+                              {
+                                "type": "public",
+                                "methodName": "submit",
+                                "componentId": null
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "componentProps": {
+                        "span": 12
+                      },
+                      "id": "col_nagfb545"
                     }
                   ],
                   "componentProps": {
                     "gutter": 10
                   },
-                  "id": "row_epn38h0h"
-                },
-                {
-                  "label": "1，今天是否有吃药？",
-                  "type": "text",
-                  "field": "text_gu9fyck8",
-                  "icon": "epic-icon-liebiao",
-                  "input": false,
-                  "componentProps": {
-                    "size": "h3"
-                  },
-                  "id": "text_gu9fyck8"
-                },
-                {
-                  "label": "单选框",
-                  "type": "radio",
-                  "icon": "epic-icon-danxuan-cuxiantiao",
-                  "field": "radio_vx9jtpuk",
-                  "input": true,
-                  "componentProps": {
-                    "options": [
-                      {
-                        "label": "吃了",
-                        "value": 1
-                      },
-                      {
-                        "label": "没吃",
-                        "value": 2
-                      }
-                    ],
-                    "optionType": "default",
-                    "defaultValue": 2,
-                    "disabled": true
-                  },
-                  "id": "radio_vx9jtpuk",
-                  "rules": [
-                    {
-                      "required": true,
-                      "message": "必填项",
-                      "type": "number",
-                      "trigger": [
-                        "change"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "label": "2，今天晚上想吃什么？",
-                  "type": "text",
-                  "field": "text_vvfrc1yq",
-                  "icon": "epic-icon-liebiao",
-                  "input": false,
-                  "componentProps": {
-                    "size": "h3"
-                  },
-                  "id": "text_vvfrc1yq"
-                },
-                {
-                  "label": "多选框",
-                  "type": "checkbox",
-                  "icon": "epic-icon-duoxuan1",
-                  "field": "checkbox_yws0v3pa",
-                  "input": true,
-                  "componentProps": {
-                    "options": [
-                      {
-                        "label": "烧鸡",
-                        "value": "选项1"
-                      },
-                      {
-                        "label": "烧鸭",
-                        "value": "选项2"
-                      },
-                      {
-                        "label": "烧鹅",
-                        "value": "选项3"
-                      }
-                    ],
-                    "disabled": true
-                  },
-                  "id": "checkbox_yws0v3pa",
-                  "rules": [
-                    {
-                      "required": true,
-                      "message": "必填项",
-                      "type": "array",
-                      "trigger": [
-                        "change"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "label": "3，今天的心情评分如何？",
-                  "type": "text",
-                  "field": "text_av77aojn",
-                  "icon": "epic-icon-liebiao",
-                  "input": false,
-                  "componentProps": {
-                    "size": "h4"
-                  },
-                  "id": "text_av77aojn"
-                },
-                {
-                  "label": "滑块",
-                  "type": "slider",
-                  "icon": "epic-icon-menu",
-                  "field": "slider_e51uux3d",
-                  "input": true,
-                  "id": "slider_e51uux3d",
-                  "componentProps": {
-                    "disabled": true
-                  }
-                },
-                {
-                  "label": "4，今天有什么感想？",
-                  "type": "text",
-                  "field": "text_7hfknr8s",
-                  "icon": "epic-icon-liebiao",
-                  "input": false,
-                  "componentProps": {
-                    "size": "h4"
-                  },
-                  "id": "text_7hfknr8s"
-                },
-                {
-                  "label": "文本域",
-                  "type": "textarea",
-                  "field": "textarea_rc1v4r07",
-                  "icon": "epic-icon-edit",
-                  "input": true,
-                  "componentProps": {
-                    "placeholder": "请输入",
-                    "disabled": true
-                  },
-                  "id": "textarea_rc1v4r07",
-                  "rules": [
-                    {
-                      "required": true,
-                      "message": "必填项",
-                      "type": "string",
-                      "trigger": [
-                        "change"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "label": "5，明天是否要通知是按时吃药？",
-                  "type": "text",
-                  "field": "text_ttoo9i5i",
-                  "icon": "epic-icon-liebiao",
-                  "input": false,
-                  "componentProps": {
-                    "size": "h4"
-                  },
-                  "id": "text_ttoo9i5i"
-                },
-                {
-                  "label": "开关",
-                  "type": "switch",
-                  "icon": "epic-icon-kaiguan3",
-                  "field": "switch_beo1j8a5",
-                  "input": true,
-                  "componentProps": {
-                    "defaultValue": true,
-                    "disabled": true
-                  },
-                  "id": "switch_beo1j8a5",
-                  "rules": [
-                    {
-                      "required": true,
-                      "message": "必填项",
-                      "type": "boolean",
-                      "trigger": [
-                        "change"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "label": "按钮",
-                  "type": "button",
-                  "field": "button_z651seiv",
-                  "icon": "epic-icon-button-remove",
-                  "input": false,
-                  "componentProps": {
-                    "type": "primary",
-                    "class": "display:block;margin-left:auto;margin-right:auto",
-                    "style": {
-                      "width": "50%"
-                    }
-                  },
-                  "id": "button_z651seiv",
-                  "on": {
-                    "click": [
-                      {
-                        "type": "component",
-                        "methodName": "validate",
-                        "componentId": "form_riwfjy9f"
-                      },
-                      {
-                        "type": "custom",
-                        "methodName": "submit",
-                        "componentId": null
-                      }
-                    ]
-                  }
+                  "id": "row_c3lkmp3e"
                 }
               ],
-              "id": "form_riwfjy9f"
+              "id": "form_dql3iva7"
             }
           ],
-          "id": "card_1u0p4edl",
-          "componentProps": {
-            "hidden": false
-          }
+          "id": "card_pfgjnpct"
         }
       ],
       "componentProps": {
@@ -361,10 +357,19 @@ let pageSchema = ref<PageSchema>({
           "padding": "16px"
         }
       },
-      "name": "问卷调查"
+      "name": "题型一"
     }
   ],
-  "script": "const { defineExpose, find } = epic;\n\nfunction submit (){\n    console.log('test')\n}\n\n// 通过defineExpose暴露的函数或者属性\ndefineExpose({\n submit \n})"
+  "script": `
+  const { defineExpose,publicMethods } = epic;
+  function test (){
+      console.log('test',publicMethods)
+      publicMethods.getReady&&publicMethods.getReady()
+  }
+  // 通过defineExpose暴露的函数或者属性
+
+  defineExpose({test })`
+
 })
 
 const kfb = ref<any>(null)
@@ -372,10 +377,14 @@ let flag = true
 
 async function handleGetData() {
   flag = !flag
-  pluginManager.changeDisabled(pageSchema.value, flag)
+  kfb.value.changeDisabled(pageSchema.value, flag)
 
 }
 
+
+function clearValidate() {
+  kfb.value.clearValidate()
+}
 
 async function setFormData() {
   let obj = {
@@ -390,7 +399,7 @@ async function setFormData() {
     "textarea_rc1v4r07": "11"
   }
   kfb.value.setData(obj)
-  pluginManager.setFormData(pageSchema.value, obj)
+
 }
 
 function handleReady(pageManager: PageManager) {

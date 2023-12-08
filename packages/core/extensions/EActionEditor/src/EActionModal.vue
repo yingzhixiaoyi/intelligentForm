@@ -8,7 +8,7 @@
             自定义函数
           </div>
           <div class="fun-btn" :class="{ checked: state.actionItem.type === 'public' }" @click="toggleMethod('public')">
-            公共函数
+            预设连接函数
           </div>
           组件
           <div class="flex-1 h-0">
@@ -32,6 +32,7 @@
       <!-- 动作配置 start -->
       <div class="epic-modal-right-panel">
         <EScriptEdit v-if="state.actionItem.type === 'custom'" />
+        <EditPublicMethods v-if="state.actionItem.type === 'public'" v-bind:="state.actionItem"/>
         <div v-else-if="actionArgsConfigs.length === 0" class="text-center pt-42px text-gray-400">暂无配置</div>
         <EArgsEditor v-else v-model="state.actionItem.args" :actionArgsConfigs="actionArgsConfigs" />
       </div>
@@ -47,6 +48,7 @@ import ETree from '../../../components/tree'
 import { NodeItem, PageSchema, FormDataModel } from '../../../types/epic-designer'
 
 import EScriptEdit from './EScriptEdit.vue'
+import EditPublicMethods from './EditPublicMethods.vue'
 import EArgsEditor from './EArgsEditor.vue'
 
 const Modal = pluginManager.getComponent('modal')

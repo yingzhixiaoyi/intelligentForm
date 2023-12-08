@@ -3,7 +3,7 @@ import {
     type SchemaGroupItem,
 } from "@epic-designer/core/types/epic-designer.d";
 import {loadAsyncComponent} from "../common";
-import {ref} from "vue";
+import {reactive, ref} from "vue";
 import {type PageSchema} from '@epic-designer/core'
 
 export interface ActivitybarModel {
@@ -77,15 +77,24 @@ export class PluginManager {
         rightSidebars: [],
     };
 
-    publicMethods: PublicMethodsModel = {
-        // test: {
-        //   describe: "测试函数",
-        //   methodName: "test",
-        //   method: () => {
-        //     alert("测试函数弹出");
-        //   },
-        // },
-    };
+    publicMethods: PublicMethodsModel = reactive({
+        submit: {
+            describe: "表单提交",
+            methodName: "submit",
+            bindPublicMethod: "formSubmit",
+            method: () => {
+                this.publicMethods.formSubmit && this.publicMethods.formSubmit.method()
+            },
+        },
+        close: {
+            describe: "表单关闭",
+            methodName: "close",
+            bindPublicMethod: "formClose",
+            method: () => {
+                this.publicMethods.formClose && this.publicMethods.formClose.method()
+            },
+        },
+    });
 
     /**
      * 添加组件到插件管理器中
@@ -315,50 +324,7 @@ export class PluginManager {
         this.modulesList.value = []
     }
 
-    /**
-     * 改变disabled状态
-     *
-     */
-    changeDisabled(data:any, type:any) {
-        if (Object.prototype.toString.call(data) === '[object Array]') {
-            data.forEach(item => this.changeDisabled(item, type))
-        } else if (Object.prototype.toString.call(data) === '[object Object]') {
-            if (data['componentProps']) {
-                data['componentProps']['disabled'] = type
-            }
-            if (data['children']) {
-                this.changeDisabled(data['children'], type)
-            }
-            if (data['schemas']) {
-                this.changeDisabled(data['schemas'], type)
-            }
-        }
-    }
 
-    /**
-     * setFormData 方法
-     *
-     */
-    setFormData(data:any, value:any) {
-        if (Object.prototype.toString.call(data) === '[object Array]') {
-            data.forEach(item => this.setFormData(item, value))
-        } else if (Object.prototype.toString.call(data) === '[object Object]') {
-            if (data['componentProps'] && data['componentProps']['disabled']) {
-                console.log('disabled状态下不可编辑')
-                return;
-            }
-            if (value.hasOwnProperty(data['id'])) {
-                data['componentProps']['defaultValue'] = value[data['id']]
-                return
-            }
-            if (data['children']) {
-                this.setFormData(data['children'], value)
-            }
-            if (data['schemas']) {
-                this.setFormData(data['schemas'], value)
-            }
-        }
-    }
 }
 
 export const pluginManager = new PluginManager();

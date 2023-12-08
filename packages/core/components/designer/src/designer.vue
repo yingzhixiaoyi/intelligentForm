@@ -28,25 +28,33 @@
           </slot>
         </div>
         <div class="epic-split-view-container" :class="{ 'hidden-header': hiddenHeader }">
-          <EActionBar />
-          <EEditContainer />
-          <ERightSidebar />
+          <EActionBar/>
+          <EEditContainer/>
+          <ERightSidebar/>
         </div>
       </div>
     </template>
     <template #fallback>
       <div class="loading-box">
-        <EAsyncLoader />
+        <EAsyncLoader/>
       </div>
     </template>
   </Suspense>
 </template>
 <script lang="ts" setup>
-import { provide, reactive, toRaw, watch, nextTick } from 'vue'
-import { DesignerState, NodeItem, PageSchema } from '../../../types/epic-designer'
-import { getMatchedById, loadAsyncComponent, revoke, usePageManager, deepCompareAndModify, deepEqual, deepClone } from '@epic-designer/utils'
-import { DesignerProps } from './types'
-import { useShareStore } from '@epic-designer/utils'
+import {provide, reactive, toRaw, watch, nextTick} from 'vue'
+import {DesignerState, NodeItem, PageSchema} from '../../../types/epic-designer'
+import {
+  getMatchedById,
+  loadAsyncComponent,
+  revoke,
+  usePageManager,
+  deepCompareAndModify,
+  deepEqual,
+  deepClone
+} from '@epic-designer/utils'
+import {DesignerProps} from './types'
+import {useShareStore} from '@epic-designer/utils'
 
 const EHeader = loadAsyncComponent(() => import('./modules/header/index.vue'))
 const EActionBar = loadAsyncComponent(() => import('./modules/actionBar/index.vue'))
@@ -75,7 +83,7 @@ const pageSchema = reactive<PageSchema>({
 })
 
 // 记录缩放状态 start
-const { disabledZoom } = useShareStore()
+const {disabledZoom} = useShareStore()
 watch(() => props.disabledZoom, newVal => {
   disabledZoom.value = newVal
 }, {
@@ -101,16 +109,16 @@ const defaultSchemas = [{
   }
 }]
 
-const defaultScript = `const { defineExpose, find } = epic;
+const defaultScript = `
+  const { defineExpose,publicMethods } = epic;
 
-function test (){
-    console.log('test')
-}
+  function test (){
+      console.log('test',publicMethods)
+      publicMethods.formTest&&publicMethods.formTest()
+  }
 
-// 通过defineExpose暴露的函数或者属性
-defineExpose({
- test 
-})`
+  // 通过defineExpose暴露的函数或者属性
+  defineExpose({test})`
 
 pageSchema.script = defaultScript
 
@@ -168,7 +176,7 @@ async function setHoverNode(schema: NodeItem | null = null) {
 function handleReady() {
   // 等待DOM更新循环结束后
   nextTick(() => {
-    emit('ready', { pageManager })
+    emit('ready', {pageManager})
   })
 }
 

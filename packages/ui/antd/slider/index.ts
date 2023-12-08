@@ -7,6 +7,8 @@ export default {
     icon: "epic-icon-menu",
     field: "slider",
     input: true,
+    componentProps: {
+    }
   },
   config: {
     attribute: [

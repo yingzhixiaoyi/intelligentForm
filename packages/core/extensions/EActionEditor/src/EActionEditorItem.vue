@@ -25,7 +25,7 @@
                 自定义函数
               </div>
               <div v-else-if="action.type === 'public'">
-                公共函数
+                预设连接函数
               </div>
               {{ action.methodName }}
             </div>
