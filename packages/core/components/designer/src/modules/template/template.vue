@@ -1,7 +1,7 @@
 <template>
   <div class="epic-outline">
     <Button v-for="(item,index) in modulesList" :key="index" class="block my-4 mx-auto" @click="setPageSchema(item)">
-      {{ item['schemas'][0]['label'] }}
+      {{ item['schemas'][0]['name'] }}
     </Button>
   </div>
 </template>
@@ -14,13 +14,18 @@ let modulesList = ref([])
 watch(() => pluginManager.modulesList, (e) => {
   modulesList.value = e.value
 }, {immediate: true, deep: true})
-let pageSchema = inject('pageSchema') as PageSchema
+let pageSchema = inject('pageSchema') as any
 
 
 function setPageSchema(item: PageSchema) {
-  pageSchema.schemas = item.schemas
-  pageSchema.script = item.script
-  item.canvas && (pageSchema.canvas = item.canvas)
+  pageSchema.schemas = [{}]
+  pageSchema.script = ''
+  pageSchema.canvas = {}
+  setTimeout(() => {
+    pageSchema.schemas = item.schemas
+    pageSchema.script = item.script
+    item.canvas && (pageSchema.canvas = item.canvas)
+  }, 0)
 }
 
 

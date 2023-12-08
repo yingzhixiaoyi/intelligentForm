@@ -186,6 +186,7 @@ function handleExportData(fileName = `epic-data.json`) {
   actions.setAttribute("href", encodedUri);
   actions.setAttribute("download", fileName);
   actions.click();
+  actions.remove()
 }
 
 /**
