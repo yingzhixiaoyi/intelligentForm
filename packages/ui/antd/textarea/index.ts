@@ -99,6 +99,11 @@ export default {
         field: "componentProps.allowClear",
       },
       {
+        label: "只读",
+        type: "switch",
+        field: "componentProps.readonly",
+      },
+      {
         label: "禁用",
         type: "switch",
         field: "componentProps.disabled",
