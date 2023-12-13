@@ -17,8 +17,8 @@
 </template>
 <script lang="ts" setup>
 import ENode from '../../../../node/index'
-import {Designer, NodeItem, PageSchema} from '../../../../../types/epic-designer'
-import {revoke, getAttributeValue, setAttributeValue} from '@epic-designer/utils'
+import {Designer, NodeItem, PageSchema} from '../../../../../types/justin-intelligent-form'
+import {revoke, getAttributeValue, setAttributeValue} from '@justin-intelligent-form/utils'
 
 import {inject, computed, nextTick} from 'vue'
 

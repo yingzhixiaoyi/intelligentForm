@@ -1,15 +1,15 @@
 {
   "name": "justin-intelligent-form",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "typings": "dist/epic-designer/index.d.ts",
+  "typings": "dist/justin-intelligent-form/index.d.ts",
   "description": "基于vue3的设计器,可视化开发页面表单",
   "author": "justin",
   "keywords": [
     "form",
-    "epic-designer",
+    "justin-intelligent-form",
     "设计器",
     "页面设计",
     "designer",

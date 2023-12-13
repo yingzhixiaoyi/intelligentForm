@@ -1,5 +1,5 @@
 {
-  "name": "@epic-designer/core",
+  "name": "@justin-intelligent-form/core",
   "version": "0.0.1",
   "type": "module",
   "main": "index.ts",
@@ -7,7 +7,7 @@
   "author": "justin",
   "keywords": [
     "form",
-    "epic-designer",
+    "justin-intelligent-form",
     "设计器",
     "页面设计",
     "低代码",
@@ -15,11 +15,11 @@
     "工作流"
   ],
   "bugs": {
-    "url": "https://github.com/Kchengz/epic-designer/issues"
+    "url": "https://github.com/Kchengz/justin-intelligent-form/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kchengz/epic-designer"
+    "url": "https://github.com/Kchengz/justin-intelligent-form"
   },
   "scripts": {
     "preview": "vite preview",

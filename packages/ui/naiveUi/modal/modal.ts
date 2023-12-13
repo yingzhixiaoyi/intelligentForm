@@ -1,5 +1,5 @@
 import { defineComponent, h, renderSlot, type PropType } from "vue";
-import { type NodeItem } from "@epic-designer/core/types/epic-designer";
+import { type NodeItem } from "@justin-intelligent-form/core/types/justin-intelligent-form";
 import { NModal, NButton, NSpace } from "naive-ui";
 
 export default defineComponent({

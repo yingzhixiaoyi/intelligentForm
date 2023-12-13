@@ -1,4 +1,4 @@
-import { type NodeItem } from '@epic-designer/core/types/epic-designer'
+import { type NodeItem } from '@justin-intelligent-form/core/types/justin-intelligent-form'
 import { ref, type Ref } from 'vue'
 
 /**

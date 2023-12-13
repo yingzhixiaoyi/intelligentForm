@@ -1,6 +1,6 @@
 import { type Ref, type PropType } from 'vue';
 import { Form } from 'ant-design-vue';
-import type { NodeItem, FormDataModel } from '@epic-designer/core/types/epic-designer';
+import type { NodeItem, FormDataModel } from '@justin-intelligent-form/core/types/justin-intelligent-form';
 interface FormInstance extends InstanceType<typeof Form> {
     getData?: () => FormDataModel;
     setData?: (FormDataModel: any) => void;

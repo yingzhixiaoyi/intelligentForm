@@ -23,9 +23,9 @@
     class="hover-widget absolute transition-all pointer-events-none z-998" />
 </template>
 <script lang="ts" setup>
-import { PageSchema, Designer } from '../../../../../types/epic-designer'
+import { PageSchema, Designer } from '../../../../../types/justin-intelligent-form'
 import { inject, computed, ref, onMounted, watch } from 'vue'
-import { pluginManager, generateNewSchema, revoke, findSchemaInfoById, useShareStore, useTimedQuery, type PageManager } from '@epic-designer/utils'
+import { pluginManager, generateNewSchema, revoke, findSchemaInfoById, useShareStore, useTimedQuery, type PageManager } from '@justin-intelligent-form/utils'
 import { useResizeObserver } from '@vueuse/core'
 import EIcon from '../../../../icon'
 const pageManager = inject('pageManager', {}) as PageManager

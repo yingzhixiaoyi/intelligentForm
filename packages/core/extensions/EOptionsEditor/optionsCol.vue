@@ -21,7 +21,7 @@
 
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
-import { pluginManager } from '@epic-designer/utils'
+import { pluginManager } from '@justin-intelligent-form/utils'
 import { inject,computed } from 'vue';
 import EIcon from '../../components/icon'
 

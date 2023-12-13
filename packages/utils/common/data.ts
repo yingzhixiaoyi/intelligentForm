@@ -1,7 +1,7 @@
 import {
   PageSchema,
   type NodeItem,
-} from "@epic-designer/core/types/epic-designer";
+} from "@justin-intelligent-form/core/types/justin-intelligent-form";
 import { getUUID } from "./string";
 
 /**
@@ -458,7 +458,7 @@ export function findSchemaInfoById(
 }
 
 /**
- * 将k-form-design数据转换为epic-designer数据
+ * 将k-form-design数据转换为justin-intelligent-form数据
  * @param data
  * @returns
  */

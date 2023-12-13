@@ -10,8 +10,8 @@
 </template>
 <script lang="ts" setup>
 import { inject, ref, toRaw, watch } from 'vue'
-import { pluginManager, deepEqual, deepCompareAndModify } from '@epic-designer/utils'
-import { Designer } from '../../../../../types/epic-designer'
+import { pluginManager, deepEqual, deepCompareAndModify } from '@justin-intelligent-form/utils'
+import { Designer } from '../../../../../types/justin-intelligent-form'
 
 const MonacoEditor = pluginManager.getComponent('monacoEditor')
 const monacoEditorRef = ref<any>(null)

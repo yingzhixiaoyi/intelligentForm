@@ -1,5 +1,5 @@
 // 注册element-plus ui
-import { type PluginManager } from "@epic-designer/utils";
+import { type PluginManager } from "@justin-intelligent-form/utils";
 import Input from "./input";
 import InputNumber from "./input-number";
 import Form from "./form";

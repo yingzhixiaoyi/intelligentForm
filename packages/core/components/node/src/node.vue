@@ -36,8 +36,8 @@
 </template>
 <script lang="ts" setup>
 import { shallowRef, ref, inject, computed, reactive, useAttrs, onUnmounted, provide, Slots, renderSlot, defineComponent, watch, h, ComponentPublicInstance } from 'vue'
-import { pluginManager, capitalizeFirstLetter, PageManager, deepClone, deepCompareAndModify, deepEqual } from '@epic-designer/utils'
-import { FormDataModel, NodeItem } from '../../../types/epic-designer'
+import { pluginManager, capitalizeFirstLetter, PageManager, deepClone, deepCompareAndModify, deepEqual } from '@justin-intelligent-form/utils'
+import { FormDataModel, NodeItem } from '../../../types/justin-intelligent-form'
 
 export interface ComponentNodeInstance extends ComponentPublicInstance {
   setValue?: (value: any) => void,

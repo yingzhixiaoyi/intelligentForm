@@ -16,7 +16,7 @@
 </template>
 <script lang="ts" setup>
 import ENode from '../../../components/node'
-import { NodeItem } from '../../../types/epic-designer'
+import { NodeItem } from '../../../types/justin-intelligent-form'
 import { computed } from 'vue'
 
 const props = defineProps<{

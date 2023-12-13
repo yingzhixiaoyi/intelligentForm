@@ -20,9 +20,9 @@
 </template>
 <script lang="ts" setup>
 import { watchOnce, useElementSize, useResizeObserver } from '@vueuse/core'
-import type { PageSchema } from '../../../../../types/epic-designer'
+import type { PageSchema } from '../../../../../types/justin-intelligent-form'
 
-import { useShareStore, useElementDrag, useElementZoom } from '@epic-designer/utils'
+import { useShareStore, useElementDrag, useElementZoom } from '@justin-intelligent-form/utils'
 import { ref, nextTick,inject, watch, computed } from 'vue'
 import Toolbar from './toolbar.vue'
 

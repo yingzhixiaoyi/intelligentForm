@@ -9,7 +9,7 @@
 </template>
 <script setup lang="ts">
 import {PropType} from "vue/dist/vue";
-import {NodeItem} from "@epic-designer/core";
+import {NodeItem} from "@justin-intelligent-form/core";
 
 const props = defineProps({
   record: {

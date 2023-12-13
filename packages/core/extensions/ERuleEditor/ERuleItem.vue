@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import { FormItemRule } from './types'
 import { computed, inject } from 'vue'
-import { PageManager } from '@epic-designer/utils'
+import { PageManager } from '@justin-intelligent-form/utils'
 import ENode from '../../components/node/index'
 import EIcon from '../../components/icon'
 import { typeOptions, triggerOptions, lenTypeOptions } from './data'

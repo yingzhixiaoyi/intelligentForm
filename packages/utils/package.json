@@ -1,7 +1,7 @@
 {
-  "name": "@epic-designer/utils",
+  "name": "@justin-intelligent-form/utils",
   "version": "1.0.0",
-  "description": "epic-designer utils",
+  "description": "justin-intelligent-form utils",
   "main": "index.ts",
   "author": "kchengz"
 }

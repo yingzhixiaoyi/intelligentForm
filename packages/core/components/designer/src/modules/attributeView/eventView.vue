@@ -11,8 +11,8 @@
   </aside>
 </template>
 <script lang="ts" setup>
-import { Designer, PageSchema } from '../../../../../types/epic-designer'
-import { pluginManager, revoke, getAttributeValue, setAttributeValue } from '@epic-designer/utils'
+import { Designer, PageSchema } from '../../../../../types/justin-intelligent-form'
+import { pluginManager, revoke, getAttributeValue, setAttributeValue } from '@justin-intelligent-form/utils'
 import { inject, computed } from 'vue'
 const pageSchema = inject('pageSchema') as PageSchema
 const designer = inject('designer') as Designer

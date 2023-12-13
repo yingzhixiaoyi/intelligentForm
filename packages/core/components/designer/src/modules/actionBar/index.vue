@@ -16,8 +16,8 @@
 </template>
 <script lang="ts" setup>
 import { ref, shallowRef } from 'vue'
-import { pluginManager } from '@epic-designer/utils'
-import { ActivitybarModel } from '@epic-designer/utils'
+import { pluginManager } from '@justin-intelligent-form/utils'
+import { ActivitybarModel } from '@justin-intelligent-form/utils'
 import EIcon from '../../../../icon'
 defineOptions({
   name: 'EActionBar'

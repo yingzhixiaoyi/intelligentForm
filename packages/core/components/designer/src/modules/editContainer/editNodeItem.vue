@@ -17,8 +17,8 @@
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
 import { computed, inject } from 'vue'
-import { revoke } from '@epic-designer/utils'
-import { NodeItem, PageSchema, Designer } from '../../../../../types/epic-designer'
+import { revoke } from '@justin-intelligent-form/utils'
+import { NodeItem, PageSchema, Designer } from '../../../../../types/justin-intelligent-form'
 import ENodeItem from './nodeItem.vue'
 const designer = inject('designer') as Designer
 const pageSchema = inject('pageSchema') as PageSchema

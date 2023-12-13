@@ -1,16 +1,20 @@
 <template>
   <!-- <button @click="handleReset">重置操作</button> -->
   <EDesigner ref="designerRef" @save="handleSubmit">
-   
+
   </EDesigner>
-  
+
 </template>
 <script lang="ts" setup>
-import { EDesigner, type PageSchema } from '@epic-designer/core'
-import { ref } from 'vue'
+import {EDesigner, type PageSchema, pluginManager} from '@justin-intelligent-form/core'
+import {ref} from 'vue'
+
 const designerRef = ref<typeof EDesigner>()
+import epicData1 from '../modules/epic-data1.json';
+import epicData2 from '../modules/epic-data2.json';
+import epicData3 from '../modules/epic-data3.json';
 
-
+pluginManager.setModulesMethod([epicData1, epicData2, epicData3])
 // function handleReset () {
 //   designerRef.value!.reset()
 // }

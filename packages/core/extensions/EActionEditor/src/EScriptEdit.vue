@@ -8,9 +8,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { pluginManager } from '@epic-designer/utils'
+import { pluginManager } from '@justin-intelligent-form/utils'
 import { ref, inject } from 'vue'
-import { PageSchema } from '../../../types/epic-designer'
+import { PageSchema } from '../../../types/justin-intelligent-form'
 const MonacoEditor = pluginManager.getComponent('monacoEditor')
 const MonacoEditorConfig = {
   theme: 'vs-light',

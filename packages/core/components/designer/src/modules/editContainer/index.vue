@@ -9,7 +9,7 @@
     </section>
 </template>
 <script lang="ts" setup>
-import { PageSchema } from '../../../../../types/epic-designer'
+import { PageSchema } from '../../../../../types/justin-intelligent-form'
 import KPreviewWidgets from './previewWidgets.vue'
 import ENodeItem from './nodeItem.vue'
 import KEditScreenContainer from './editScreenContainer.vue'

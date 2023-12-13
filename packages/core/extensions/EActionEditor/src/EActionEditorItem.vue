@@ -45,8 +45,8 @@
 </template>
 <script lang="ts" setup>
 import { type PropType, inject } from 'vue'
-import { findSchemaById } from '@epic-designer/utils'
-import { PageSchema } from '../../../types/epic-designer'
+import { findSchemaById } from '@justin-intelligent-form/utils'
+import { PageSchema } from '../../../types/justin-intelligent-form'
 import EIcon from '../../../components/icon'
 import draggable from 'vuedraggable'
 

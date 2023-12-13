@@ -20,7 +20,7 @@
 </template>
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import { NodeItem, Designer } from '../../../types/epic-designer'
+import { NodeItem, Designer } from '../../../types/justin-intelligent-form'
 import ETreeNodeItem from './treeNodeItem.vue'
 import draggable from 'vuedraggable'
 defineOptions({

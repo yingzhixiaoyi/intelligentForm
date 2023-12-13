@@ -1,7 +1,7 @@
 <template>
   <Suspense @resolve="handleReady">
     <template #default>
-      <div class="epic-designer-main">
+      <div class="justin-intelligent-form-main">
         <div class="epic-header-container">
           <slot name="header">
             <EHeader v-if="!props.hiddenHeader" @save="handleSave">
@@ -43,7 +43,7 @@
 </template>
 <script lang="ts" setup>
 import {provide, reactive, toRaw, watch, nextTick} from 'vue'
-import {DesignerState, NodeItem, PageSchema} from '../../../types/epic-designer'
+import {DesignerState, NodeItem, PageSchema} from '../../../types/justin-intelligent-form'
 import {
   getMatchedById,
   loadAsyncComponent,
@@ -52,9 +52,9 @@ import {
   deepCompareAndModify,
   deepEqual,
   deepClone
-} from '@epic-designer/utils'
+} from '@justin-intelligent-form/utils'
 import {DesignerProps} from './types'
-import {useShareStore} from '@epic-designer/utils'
+import {useShareStore} from '@justin-intelligent-form/utils'
 
 const EHeader = loadAsyncComponent(() => import('./modules/header/index.vue'))
 const EActionBar = loadAsyncComponent(() => import('./modules/actionBar/index.vue'))

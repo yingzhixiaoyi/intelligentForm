@@ -15,16 +15,16 @@ importers:
         specifier: ^4.1.3
         version: 4.1.3
     devDependencies:
-      '@epic-designer/core':
+      '@justin-intelligent-form/core':
         specifier: workspace:*
         version: link:packages/core
-      '@epic-designer/ui':
+      '@justin-intelligent-form/ui':
         specifier: workspace:*
         version: link:packages/ui
-      '@epic-designer/ui-antdv3':
+      '@justin-intelligent-form/ui-antdv3':
         specifier: workspace:*
         version: link:packages/ui-antdv3
-      '@epic-designer/utils':
+      '@justin-intelligent-form/utils':
         specifier: workspace:*
         version: link:packages/utils
       '@turbo/gen':
@@ -36,9 +36,9 @@ importers:
       element-plus:
         specifier: ^2.3.8
         version: 2.3.8(vue@3.3.4)
-      epic-designer:
+      justin-intelligent-form:
         specifier: workspace:*
-        version: link:packages/epic-designer
+        version: link:packages/justin-intelligent-form
       eslint:
         specifier: ^8.45.0
         version: 8.45.0
@@ -183,7 +183,7 @@ importers:
         specifier: ^1.8.6
         version: 1.8.6(typescript@5.2.2)
 
-  packages/epic-designer:
+  packages/justin-intelligent-form:
     dependencies:
       monaco-editor:
         specifier: ^0.34.1

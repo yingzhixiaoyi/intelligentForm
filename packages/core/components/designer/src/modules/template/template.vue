@@ -7,8 +7,8 @@
 </template>
 <script lang="ts" setup>
 import {inject, watch, ref} from 'vue'
-import {PageSchema} from '../../../../../types/epic-designer'
-import {pluginManager} from "@epic-designer/utils";
+import {PageSchema} from '../../../../../types/justin-intelligent-form'
+import {pluginManager} from "@justin-intelligent-form/utils";
 const Button = pluginManager.getComponent('button')
 let modulesList = ref([])
 watch(() => pluginManager.modulesList, (e) => {

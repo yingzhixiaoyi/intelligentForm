@@ -18,12 +18,12 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { NodeItem } from '../../../types/epic-designer'
+import { NodeItem } from '../../../types/justin-intelligent-form'
 import type { PropType } from 'vue'
 import { ref, provide, computed, useSlots } from 'vue'
 import ETreeNodes from './treeNodes.vue'
 import EIcon from '../../icon'
-import { pluginManager } from '@epic-designer/utils'
+import { pluginManager } from '@justin-intelligent-form/utils'
 
 defineOptions({
   name: 'ETree'

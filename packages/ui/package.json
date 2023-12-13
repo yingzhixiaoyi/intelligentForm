@@ -1,7 +1,7 @@
 {
-  "name": "@epic-designer/ui",
+  "name": "@justin-intelligent-form/ui",
   "version": "1.0.0",
-  "description": "epic-designer base ui",
+  "description": "justin-intelligent-form base ui",
   "main": "index.ts",
   "scripts": {
     "build": "vue-tsc --noEmit && vite build"

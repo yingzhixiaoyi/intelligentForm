@@ -8,7 +8,7 @@
       <p class="text-lg">使用组件时;methods存在 <span
           class="text-red">{{ pluginManager.publicMethods[($attrs['methodName'] as any)]['bindPublicMethod'] }}</span> 即可调用。
       </p>
-      <p>import {pluginManager} from "@epic-designer/utils";</p>
+      <p>import {pluginManager} from "@justin-intelligent-form/utils";</p>
       <p> pluginManager.addPublicMethod({</p>
       <p> methodName: '{{ pluginManager.publicMethods[($attrs['methodName'] as any)]['bindPublicMethod'] }}',</p>
       <p> method: {{ pluginManager.publicMethods[($attrs['methodName'] as any)]['bindPublicMethod'] }}</p>
@@ -28,5 +28,5 @@
   </div>
 </template>
 <script lang="ts" setup>
-import {pluginManager} from '@epic-designer/utils'
+import {pluginManager} from '@justin-intelligent-form/utils'
 </script>

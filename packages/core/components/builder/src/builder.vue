@@ -25,8 +25,8 @@ import {
   getCurrentInstance,
   type ComponentInternalInstance
 } from 'vue'
-import {PageSchema, FormDataModel} from '../../../types/epic-designer'
-import {loadAsyncComponent, deepCompareAndModify, deepClone, usePageManager} from '@epic-designer/utils'
+import {PageSchema, FormDataModel} from '../../../types/justin-intelligent-form'
+import {loadAsyncComponent, deepCompareAndModify, deepClone, usePageManager} from '@justin-intelligent-form/utils'
 
 const EAsyncLoader = loadAsyncComponent(() => import('../../asyncLoader/index.vue'))
 

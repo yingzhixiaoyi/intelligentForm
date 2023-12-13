@@ -13,7 +13,7 @@
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { NodeItem } from '../../types/epic-designer'
+import { NodeItem } from '../../types/justin-intelligent-form'
 
 const props = defineProps<{
   record:NodeItem

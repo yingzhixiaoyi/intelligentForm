@@ -12,8 +12,8 @@
 
 <script lang="ts" setup>
 import {ref, onMounted} from 'vue'
-import {EBuilder, PageManager, PageSchema} from '@epic-designer/core'
-import {pluginManager} from "@epic-designer/utils";
+import {EBuilder, PageManager, PageSchema} from '@justin-intelligent-form/core'
+import {pluginManager} from "@justin-intelligent-form/utils";
 
 pluginManager.addPublicMethod({
   methodName: 'formSubmit',

@@ -25,8 +25,8 @@
 </template>
 <script lang="ts" setup>
 import { ref, shallowRef } from 'vue'
-import { pluginManager } from '@epic-designer/utils'
-import { RightSidebarModel } from '@epic-designer/utils'
+import { pluginManager } from '@justin-intelligent-form/utils'
+import { RightSidebarModel } from '@justin-intelligent-form/utils'
 import EBreadcrumb from './breadcrumb.vue'
 
 const rightSidebars = pluginManager.getRightSidebars()

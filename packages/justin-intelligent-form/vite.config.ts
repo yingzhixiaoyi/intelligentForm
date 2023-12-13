@@ -16,9 +16,9 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@epic-designer/core": path.resolve(__dirname, "../core"),
-      "@epic-designer/ui": path.resolve(__dirname, "../ui"),
-      "@epic-designer/utils": path.resolve(__dirname, "../utils"),
+      "@justin-intelligent-form/core": path.resolve(__dirname, "../core"),
+      "@justin-intelligent-form/ui": path.resolve(__dirname, "../ui"),
+      "@justin-intelligent-form/utils": path.resolve(__dirname, "../utils"),
     },
     dedupe: ["vue"],
   },
@@ -38,12 +38,12 @@ export default defineConfig({
         index: path.resolve(__dirname, "./index.ts"),
       },
       // 指定组件编译入口文件
-      name: "epic-designer",
+      name: "justin-intelligent-form",
       // formats: ["es"],
       // fileName: (ModuleFormat) => {
       //   const extension = ModuleFormat === 'es' ? 'js' : ModuleFormat
       //   // 区分默认入口文件和UI注册文件
-      //   const path = `epic-designer.${extension}`
+      //   const path = `justin-intelligent-form.${extension}`
       //   return path
       // }
     },

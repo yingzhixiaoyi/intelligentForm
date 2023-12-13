@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import KOptionsCol from './optionsCol.vue'
-import { pluginManager } from '@epic-designer/utils'
+import { pluginManager } from '@justin-intelligent-form/utils'
 import { provide, computed } from 'vue';
 const Button = pluginManager.getComponent('button')
 const props = defineProps<{

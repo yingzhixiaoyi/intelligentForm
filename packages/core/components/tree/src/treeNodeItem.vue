@@ -13,10 +13,10 @@
   </li>
 </template>
 <script lang="ts" setup>
-import { NodeItem } from '../../../types/epic-designer'
+import { NodeItem } from '../../../types/justin-intelligent-form'
 import EIcon from '../../icon'
 import { inject, computed, Ref, h, defineComponent, Slots } from 'vue'
-import { pluginManager } from '@epic-designer/utils'
+import { pluginManager } from '@justin-intelligent-form/utils'
 import ETreeNodes from './treeNodes.vue'
 defineOptions({
   name: 'ETreeNodeItem'

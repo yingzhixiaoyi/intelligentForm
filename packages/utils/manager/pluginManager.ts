@@ -1,10 +1,10 @@
 import {
     type NodeItem,
     type SchemaGroupItem,
-} from "@epic-designer/core/types/epic-designer.d";
+} from "@justin-intelligent-form/core/types/justin-intelligent-form.d";
 import {loadAsyncComponent} from "../common";
 import {reactive, ref} from "vue";
-import {type PageSchema} from '@epic-designer/core'
+import {type PageSchema} from '@justin-intelligent-form/core'
 
 export interface ActivitybarModel {
     id: string;

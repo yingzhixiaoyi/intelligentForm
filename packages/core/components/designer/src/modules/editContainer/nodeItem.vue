@@ -13,10 +13,10 @@
 </template>
 <script lang="ts" setup>
 import ENode from '../../../../node'
-import { NodeItem, Designer } from '../../../../../types/epic-designer'
+import { NodeItem, Designer } from '../../../../../types/justin-intelligent-form'
 import KEditNodeItem from './editNodeItem.vue'
 import { useAttrs, provide, watch, ref, onUnmounted, computed, inject } from 'vue';
-import { pluginManager, type PageManager } from '@epic-designer/utils'
+import { pluginManager, type PageManager } from '@justin-intelligent-form/utils'
 
 const attrs = useAttrs()
 const designer = inject('designer') as Designer

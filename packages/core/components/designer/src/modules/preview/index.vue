@@ -19,9 +19,9 @@
 </template>
 <script lang="ts" setup>
 import EBuilder from '../../../../builder'
-import { pluginManager, getUUID } from '@epic-designer/utils'
+import { pluginManager, getUUID } from '@justin-intelligent-form/utils'
 import { ref, inject } from 'vue'
-import { PageSchema } from '../../../../../types/epic-designer'
+import { PageSchema } from '../../../../../types/justin-intelligent-form'
 
 const Modal = pluginManager.getComponent('modal')
 

@@ -1,6 +1,7 @@
-![](https://epic.kcz66.com/static/logo.png#pic_center)
 
-<h3 align="center" style="background-image:-webkit-linear-gradient(left,#44c0fa,#c26cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">EpicDesigner</h3>
+
+<h3 align="center" style="background-image:-webkit-linear-gradient(left,#44c0fa,#c26cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">justin-intelligent-form
+</h3>
 
 
 <h4 align="center">一个开箱即用的拖拽式的可视化低代码设计器</h4>
@@ -18,28 +19,21 @@
 </p>
 
 
-📦github仓库：[https://github.com/Kchengz/epic-designer](https://github.com/Kchengz/epic-designer)
+📦github仓库：[https://github.com/yingzhixiaoyi/intelligentForm](https://github.com/yingzhixiaoyi/intelligentForm)
 
-📦gitee仓库：[https://gitee.com/kcz66/epic-designer](https://gitee.com/kcz66/epic-designer)
 
-📖文档地址：[https://kcz66.gitee.io/epic-designer/](https://kcz66.gitee.io/epic-designer/)
 
-💎项目预览地址：
-
-- element-plus：[https://epic.kcz66.com/demo/element-plus/](https://epic.kcz66.com/demo/element-plus/)
-- antdv3：[https://epic.kcz66.com/demo/antdv3/](https://epic.kcz66.com/demo/antdv3/)
-- naive-ui：[https://epic.kcz66.com/demo/naive-ui/](https://epic.kcz66.com/demo/naive-ui/)
 
 
 
 ## 简介
 
-可以简称`epic设计器`，是一个功能强大、开箱即用的拖拽式低代码设计器。它基于 Vue3 开发，兼容多套 UI 组件库，除了基础的页面设计功能，EpicDesigner 还提供了强大的扩展功能，可以让开发者根据自己的需求自由扩展和定制组件。此外，EpicDesigner使用 JSON 配置来生成页面，可帮助开发者快速生成页面，提高开发效率。它提供了两个重要组件：`e-designer` 设计器和 `e-builder` 生成器。
+`智能表单设计器`，是一个功能强大、开箱即用的拖拽式低代码设计器。它基于 Vue3 开发，兼容多套 UI 组件库，除了基础的页面设计功能，EDesigner 还提供了强大的扩展功能，可以让开发者根据自己的需求自由扩展和定制组件。此外，EpicDesigner使用 JSON 配置来生成页面，可帮助开发者快速生成页面，提高开发效率。它提供了两个重要组件：`e-designer` 设计器和 `e-builder` 生成器。
 
 
 ## 最新版本
 
-[![](https://img.shields.io/npm/v/epic-designer.svg?style=flat-square)](https://www.npmjs.com/package/epic-designer)
+[![](https://img.shields.io/npm/v/justin-intelligent-form.svg?style=flat-square)](https://www.npmjs.com/package/justin-intelligent-form)
 
 [查看更新日志](./docs/updateLog.md)
 
@@ -55,6 +49,7 @@
 - [x] 组件属性自定义
 - [x] 支持不同 UI
 - [x] 插件扩展
+- [x] 模板扩展
 
 
 
@@ -68,13 +63,13 @@
 
 `e-builder` 是一个页面构建组件，它可以将设计器生成的 JSON 配置构建成页面，完成组件的渲染、事件绑定和数据回显等操作。
 
-## 安装 epic-designer
+## 安装 justin-intelligent-form
 
 ```bash
-npm i epic-designer
+npm i justin-intelligent-form
 ```
 
-epic-designer 目标是支持多 UI 兼容,目前支持以下 UI
+justin-intelligent-form 目标是支持多 UI 兼容,目前支持以下 UI
 
 - element-plus
 - ant-design-vue
@@ -94,8 +89,8 @@ main.ts 或者 main.js 引入注册组件
 // 引入Element plus样式
 import "element-plus/dist/index.css";
 // 引入k-designer样式
-import "epic-designer/dist/style.css";
-import { pluginManager, setupElementPlus } from "epic-designer";
+import "justin-intelligent-form/dist/style.css";
+import { pluginManager, setupElementPlus } from "justin-intelligent-form";
 // 注册Element UI
 setupElementPlus(pluginManager);
 ```
@@ -110,10 +105,10 @@ main.ts 或者 main.js 引入注册组件
 
 ```javascript
 // 引入k-designer样式
-import "epic-designer/dist/style.css";
+import "justin-intelligent-form/dist/style.css";
 // 引入antd UI 重置样式
 import "ant-design-vue/dist/reset.css";
-import { pluginManager, setupAntd } from "epic-designer";
+import { pluginManager, setupAntd } from "justin-intelligent-form";
 // 使用Antd UI
 setupAntd(pluginManager);
 ```
@@ -122,8 +117,8 @@ setupAntd(pluginManager);
 // 引入antd UI样式
 import "ant-design-vue/dist/antd.css";
 // 引入k-designer样式
-import "epic-designer/dist/style.css";
-import { pluginManager, setupAntdV3 } from "epic-designer";
+import "justin-intelligent-form/dist/style.css";
+import { pluginManager, setupAntdV3 } from "justin-intelligent-form";
 // 使用Antd UI
 setupAntdV3(pluginManager);
 ```
@@ -136,8 +131,8 @@ main.ts 或者 main.js 引入注册组件
 
 ```javascript
 // 引入k-designer样式
-import "epic-designer/dist/style.css";
-import { pluginManager, setupNaiveUi } from "epic-designer";
+import "justin-intelligent-form/dist/style.css";
+import { pluginManager, setupNaiveUi } from "justin-intelligent-form";
 // 注册Naive Ui
 setupNaiveUi(pluginManager);
 ```
@@ -151,7 +146,7 @@ setupNaiveUi(pluginManager);
   </div>
 </template>
 <script setup lang="ts">
-import { EDesigner } from "epic-designer";
+import { EDesigner } from "justin-intelligent-form";
 </script>
 <style>
 .h-full {
@@ -168,7 +163,7 @@ import { EDesigner } from "epic-designer";
   </div>
 </template>
 <script setup>
-import { EBuilder } from "epic-designer";
+import { EBuilder } from "justin-intelligent-form";
 
 const pageSchema = {
   schemas: [
@@ -202,14 +197,42 @@ const pageSchema = {
 </script>
 ```
 
-## 交流
+#### EDesigner(设计器) 调用外部方法
 
-点击链接加入 qq 群聊
+```vue
+<template>
+	<EBuilder  ref="DesignRenderDom"  :pageSchema="pageSchema" />  
+</template>
 
-- [【epic-designer 交流群：747609683】](https://jq.qq.com/?_wv=1027&k=CtrM9ce2)
+<script lang="ts" setup>
+	import { EBuilder, pluginManager } from 'justin-intelligent-form';
+	
+	const DesignRenderDom = ref();
+	
+	pluginManager.addPublicMethod({
+    methodName: 'formClearValidate',
+    method: () => DesignRenderDom.value.clearValidate(),
+  });
+</script>
+```
 
-## 捐赠
-如果你觉得epic-designer对你有帮助，欢迎给我捐赠
+#### EDesigner(设计器) 模板操作方法
 
-![](https://epic.kcz66.com/static/donation.png)
+```ts
+    /**
+     * 添加模板方法
+     *
+     */
+    addModulesMethod(data: PageSchema): void;
+    /**
+     * 添加模板方法
+     *
+     */
+    setModulesMethod(data: any): void;
+    /**
+     * 清空模板方法
+     *
+     */
+    resetModulesMethod(data: PageSchema): void;
+```
 

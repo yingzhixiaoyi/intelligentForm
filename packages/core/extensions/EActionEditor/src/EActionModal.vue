@@ -42,10 +42,10 @@
   </Modal>
 </template>
 <script lang="ts" setup>
-import { pluginManager, PageManager, deepClone, findSchemaById } from '@epic-designer/utils'
+import { pluginManager, PageManager, deepClone, findSchemaById } from '@justin-intelligent-form/utils'
 import { ref, inject, toRaw, reactive, computed, nextTick } from 'vue'
 import ETree from '../../../components/tree'
-import { NodeItem, PageSchema, FormDataModel } from '../../../types/epic-designer'
+import { NodeItem, PageSchema, FormDataModel } from '../../../types/justin-intelligent-form'
 
 import EScriptEdit from './EScriptEdit.vue'
 import EditPublicMethods from './EditPublicMethods.vue'

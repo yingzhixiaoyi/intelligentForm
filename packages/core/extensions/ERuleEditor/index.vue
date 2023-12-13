@@ -22,7 +22,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { pluginManager, deepClone } from '@epic-designer/utils'
+import { pluginManager, deepClone } from '@justin-intelligent-form/utils'
 import { ref, watch, PropType } from 'vue'
 import { FormItemRule } from './types'
 import ERuleItem from './ERuleItem.vue'

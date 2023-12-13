@@ -16,8 +16,8 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { pluginManager, getUUID } from '@epic-designer/utils'
-import { NodeItem } from '../../types/epic-designer'
+import { pluginManager, getUUID } from '@justin-intelligent-form/utils'
+import { NodeItem } from '../../types/justin-intelligent-form'
 import { computed, PropType } from 'vue'
 import EIcon from '../../components/icon'
 

@@ -1,6 +1,6 @@
 import { defineComponent, h, renderSlot, type PropType } from 'vue'
 import { ElCollapseItem } from 'element-plus'
-import { type NodeItem } from '@epic-designer/core/types/epic-designer'
+import { type NodeItem } from '@justin-intelligent-form/core/types/justin-intelligent-form'
 export default defineComponent({
   props: {
     record: {

@@ -42,8 +42,8 @@
 <script lang="ts" setup>
 import draggable from 'vuedraggable'
 import { ref, computed, inject } from 'vue'
-import { generateNewSchema, findSchemaInfoById, pluginManager, revoke } from '@epic-designer/utils'
-import { NodeItem, PageSchema, Designer } from '../../../../../types/epic-designer'
+import { generateNewSchema, findSchemaInfoById, pluginManager, revoke } from '@justin-intelligent-form/utils'
+import { NodeItem, PageSchema, Designer } from '../../../../../types/justin-intelligent-form'
 import EIcon from '../../../../icon'
 const Input = pluginManager.getComponent('input')
 const pageSchema = inject('pageSchema') as PageSchema

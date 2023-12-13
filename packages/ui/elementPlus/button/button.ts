@@ -1,6 +1,6 @@
 import { defineComponent, h, renderSlot, type PropType } from 'vue'
 import { ElButton } from 'element-plus'
-import { type NodeItem } from '@epic-designer/core/types/epic-designer'
+import { type NodeItem } from '@justin-intelligent-form/core/types/justin-intelligent-form'
 
 // 二次封装组件
 export default defineComponent({

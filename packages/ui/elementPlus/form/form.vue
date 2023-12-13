@@ -10,7 +10,7 @@
 <script lang="ts" setup>
 import { ref, Ref, reactive, PropType, provide, computed, inject, onMounted } from 'vue'
 import { ElForm } from 'element-plus'
-import type { NodeItem, FormDataModel } from '@epic-designer/core/types/epic-designer'
+import type { NodeItem, FormDataModel } from '@justin-intelligent-form/core/types/justin-intelligent-form'
 
 interface FormInstance extends InstanceType<typeof ElForm> {
   getData?: () => FormDataModel

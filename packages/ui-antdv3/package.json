@@ -1,7 +1,7 @@
 {
-  "name": "@epic-designer/ui-antdv3",
+  "name": "@justin-intelligent-form/ui-antdv3",
   "version": "1.0.0",
-  "description": "epic-designer base antdv3 ui",
+  "description": "justin-intelligent-form base antdv3 ui",
   "main": "dist/index.mjs",
   "typings":"dist/src/index.d.ts",
   "scripts": {

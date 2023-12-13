@@ -6,7 +6,7 @@
   </Input>
 </template>
 <script lang="ts" setup>
-import { pluginManager } from '@epic-designer/utils'
+import { pluginManager } from '@justin-intelligent-form/utils'
 import { ref, watch, nextTick } from 'vue'
 const Input = pluginManager.getComponent('input')
 const Select = pluginManager.getComponent('select')

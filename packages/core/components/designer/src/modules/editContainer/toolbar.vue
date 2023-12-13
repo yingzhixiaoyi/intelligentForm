@@ -43,8 +43,8 @@ import {
   deepCompareAndModify,
   convertKFormData,
   deepClone
-} from '@epic-designer/utils'
-import type {PageSchema, Designer} from '../../../../../types/epic-designer'
+} from '@justin-intelligent-form/utils'
+import type {PageSchema, Designer} from '../../../../../types/justin-intelligent-form'
 import {computed, inject, ref} from 'vue'
 import EIcon from '../../../../icon'
 

@@ -10,7 +10,7 @@
 </template>
 <script setup lang="ts">
 import {PropType} from 'vue'
-import type {NodeItem} from '@epic-designer/core/types/epic-designer'
+import type {NodeItem} from '@justin-intelligent-form/core/types/justin-intelligent-form'
 import Radio from 'ant-design-vue/lib/radio'
 import Group from 'ant-design-vue/lib/radio/Group'
 
