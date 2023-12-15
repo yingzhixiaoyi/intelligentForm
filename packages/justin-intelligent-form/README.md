@@ -21,11 +21,7 @@
 
 📦github仓库：[https://github.com/yingzhixiaoyi/intelligentForm](https://github.com/yingzhixiaoyi/intelligentForm)
 
-
-
-<video  controls>
-    <source src="https://gitee.com/yingzhixiaoyi/mdnice/raw/master/202312150913.mp4" type="video/mp4">
-</video>
+https://github.com/yingzhixiaoyi/intelligentForm/assets/57881800/d3a7df15-06e0-4741-9547-ed55bfa523fa
 
 
 
