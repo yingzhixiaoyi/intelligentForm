@@ -29,7 +29,7 @@
 <!-- mp4格式 -->
 <video id="video" width="500" height="250" controls="controls" autoplay>
       <source id="mp4" src="https://gitee.com/yingzhixiaoyi/mdnice/raw/master/202312150913.mp4" type="video/mp4">
-</videos>
+</video>
 
 
 
