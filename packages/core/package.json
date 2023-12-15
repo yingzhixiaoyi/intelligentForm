@@ -15,11 +15,11 @@
     "工作流"
   ],
   "bugs": {
-    "url": "https://github.com/Kchengz/justin-intelligent-form/issues"
+    "url": "https://github.com/yingzhixiaoyi/intelligentForm/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kchengz/justin-intelligent-form"
+    "url": "https://github.com/yingzhixiaoyi/intelligentForm"
   },
   "scripts": {
     "preview": "vite preview",
