@@ -36,16 +36,16 @@ const componentStyles: NodeItem[] = [
     type: 'EInputSize',
     field: 'componentProps.style.height'
   },
-  {
-    label: '内边距',
-    type: 'EInputSize',
-    field: 'componentProps.style.padding'
-  },
-  {
-    label: '外边距',
-    type: 'EInputSize',
-    field: 'componentProps.style.margin'
-  },
+  /* {
+     label: '内边距',
+     type: 'EInputSize',
+     field: 'componentProps.style.padding'
+   },
+   {
+     label: '外边距',
+     type: 'EInputSize',
+     field: 'componentProps.style.margin'
+   },*/
   {
     label: '背景色',
     type: 'color-picker',
@@ -75,7 +75,16 @@ const componentStyles: NodeItem[] = [
         e.values.componentProps.style.color = data;
       }, 0)
     },
-  }
+  },
+  {
+    label: 'style内容',
+    type: 'textarea',
+    field: 'componentProps.style',
+    componentProps: {
+      defaultValue: '',
+      placeholder: '请输入style内容',
+    },
+  },
 ]
 
 const checkedNode = computed(() => {
@@ -103,7 +112,7 @@ function colorRgb(colorStr) {
       sColor = sColorNew;
     }
     //处理六位的颜色值f
-    let sColorChange:any = [];
+    let sColorChange: any = [];
     for (let i = 1; i < 7; i += 2) {
       sColorChange.push(parseInt("0x" + sColor.slice(i, i + 2)));
     }
