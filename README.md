@@ -40,7 +40,10 @@ https://github.com/yingzhixiaoyi/intelligentForm/assets/57881800/d3a7df15-06e0-4
 
 [![](https://img.shields.io/npm/v/justin-intelligent-form.svg?style=flat-square)](https://www.npmjs.com/package/justin-intelligent-form)
 
+#### 近期新增
 
+- [x] 添加复制上行组件
+- [x] 组件切换显示
 
 #### 功能
 
@@ -55,7 +58,7 @@ https://github.com/yingzhixiaoyi/intelligentForm/assets/57881800/d3a7df15-06e0-4
 - [x] 支持不同 UI
 - [x] 插件扩展
 - [x] 模板扩展
-- [x] 组件切换显示
+
 
 
 ## 核心组件介绍

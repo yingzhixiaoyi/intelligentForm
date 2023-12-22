@@ -42,7 +42,7 @@ export function setupComponent (pluginManager: PluginManager): void {
   pluginManager.registerActivitybar({
     id: 'template',
     title: '模板',
-    icon: 'epic-icon-juxingkaobei',
+    icon: 'epic-icon-daibanshixiang',
     component: async () =>
       await import('../components/designer/src/modules/template/template.vue')
   })

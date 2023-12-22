@@ -23,6 +23,7 @@ import Button from "./button";
 import Modal from "./modal";
 import colorPicker from "./color-picker";
 import text from "./text";
+import Copy from "./copy";
 
 export function setupAntd(pluginManager: PluginManager): void {
     // 异步加载组件
@@ -64,6 +65,7 @@ export function setupAntd(pluginManager: PluginManager): void {
         Row,
         Col,
         Button,
+        Copy,
         Modal,
         colorPicker,
         text
@@ -95,6 +97,7 @@ export function setupAntd(pluginManager: PluginManager): void {
                 "upload-file",
                 "upload-image",
                 "button",
+                "Copy",
                 "text"
             ],
         },
