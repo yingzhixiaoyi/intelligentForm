@@ -2,22 +2,24 @@
   <div class="form-main" style="height: 100%;">
     <Form ref="form" :model="formData" v-bind="componentProps" style="height: 100%;" @finish="onFinish">
       <slot name="edit-node">
-        <slot v-for="item in children" name="node" :record="item" />
+        <slot v-for="item in children" name="node" :record="item"/>
       </slot>
     </Form>
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, type Ref, type PropType, reactive, provide, computed, inject, onMounted } from 'vue'
-import { Form } from 'ant-design-vue'
-import type { NodeItem, FormDataModel } from '@justin-intelligent-form/core/types/justin-intelligent-form'
+import {ref, type Ref, type PropType, reactive, provide, computed, inject, onMounted} from 'vue'
+import {Form} from 'ant-design-vue'
+import type {NodeItem, FormDataModel} from '@justin-intelligent-form/core/types/justin-intelligent-form'
 
 interface FormInstance extends InstanceType<typeof Form> {
   getData?: () => FormDataModel
   setData?: (FormDataModel) => void
   validateFields: () => void
   validate: () => void
+  clearValidate: () => void
 }
+
 const props = defineProps({
   record: {
     type: Object as PropType<NodeItem>,
@@ -49,6 +51,14 @@ function validate() {
 }
 
 /**
+ * 清除校验表单数据
+ * @param data
+ */
+function clearValidate() {
+  return form.value?.clearValidate()
+}
+
+/**
  * 设置表单数据
  * @param data
  */
@@ -64,6 +74,7 @@ onMounted(async () => {
     forms.value[name] = form.value
     form.value.getData = getData
     form.value.setData = setData
+    form.value.clearValidate = clearValidate
     return false
   }
 })
@@ -73,8 +84,8 @@ const componentProps = computed(() => {
   let labelCol = recordProps.labelCol
   let wrapperCol = recordProps.wrapperCol
   if (recordProps.labelLayout === 'fixed') {
-    labelCol = { flex: `${recordProps.labelWidth}px` }
-    wrapperCol = { flex: 1 }
+    labelCol = {flex: `${recordProps.labelWidth}px`}
+    wrapperCol = {flex: 1}
   }
   return {
     ...recordProps,
@@ -96,6 +107,7 @@ defineExpose({
   form,
   getData,
   setData,
-  validate
+  validate,
+  clearValidate
 })
 </script>

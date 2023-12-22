@@ -167,6 +167,10 @@ export default {
         type: "validate",
         describe: "校验表单",
       },
+      {
+        type: "clearValidate",
+        describe: "清除校验",
+      },
     ],
   },
 } as ComponentConfigModel;
