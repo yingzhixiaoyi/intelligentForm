@@ -145,6 +145,10 @@ export class PluginManager {
                         type: "getValue",
                         describe: "获取值",
                     },
+                    {
+                        type: "switchDisplay",
+                        describe: "切换显示隐藏",
+                    },
                 ]
             );
         }

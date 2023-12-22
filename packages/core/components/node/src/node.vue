@@ -44,6 +44,7 @@ export interface ComponentNodeInstance extends ComponentPublicInstance {
   getValue?: () => any,
   setAttr?: (key: string, value: any) => any,
   getAttr?: (key: string) => any
+  switchDisplay?: () => any,
 }
 
 defineOptions({
@@ -163,6 +164,11 @@ watch(() => componentInstance.value, () => {
   handleAddComponentInstance()
 })
 
+//切换显示隐藏方法
+function switchDisplay() {
+  innerSchema.componentProps['hidden'] = !innerSchema.componentProps['hidden']
+}
+
 
 // 添加组件实例
 function handleAddComponentInstance() {
@@ -174,6 +180,7 @@ function handleAddComponentInstance() {
       componentInstance.value.getValue = () => {
         return formData[innerSchema.field!] || props.modelValue
       }
+      componentInstance.value.switchDisplay = switchDisplay
     }
 
     // 添加属性设置方法

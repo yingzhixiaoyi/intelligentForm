@@ -25,6 +25,9 @@
 #### 演示视频
 https://github.com/yingzhixiaoyi/intelligentForm/assets/57881800/d3a7df15-06e0-4741-9547-ed55bfa523fa
 
+#### 演示图片
+
+![演示图片](https://gitee.com/yingzhixiaoyi/mdnice/raw/master/1703211040885.jpg)
 
 
 
@@ -37,7 +40,7 @@ https://github.com/yingzhixiaoyi/intelligentForm/assets/57881800/d3a7df15-06e0-4
 
 [![](https://img.shields.io/npm/v/justin-intelligent-form.svg?style=flat-square)](https://www.npmjs.com/package/justin-intelligent-form)
 
-[查看更新日志](./docs/updateLog.md)
+
 
 #### 功能
 
@@ -52,7 +55,7 @@ https://github.com/yingzhixiaoyi/intelligentForm/assets/57881800/d3a7df15-06e0-4
 - [x] 支持不同 UI
 - [x] 插件扩展
 - [x] 模板扩展
-
+- [x] 组件切换显示
 
 
 ## 核心组件介绍

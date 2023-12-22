@@ -4,7 +4,7 @@
       <slot name="prefix">
         <a class="text-black decoration-none items-center flex" href="https://github.com/yingzhixiaoyi/intelligentForm"
           target="_blank">
-          <img src="../../../../../static/logo.png" class="w-17px h-17px" alt="" srcset="">
+          <img src="../../../../../static/logo.png" class="w-8" alt="" srcset="">
           <span class="ml-4">justin-intelligent-form</span>
         </a>
       </slot>
