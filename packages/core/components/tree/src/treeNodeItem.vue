@@ -54,7 +54,7 @@ const TreeNodeText = defineComponent({
       h('span', { class: 'text-padding' },
         {
           default: () => [
-            props.schema.label ?? pluginManager.getComponentConfingByType(props.schema.type)?.defaultSchema.label,
+            props.schema.label?  props.schema.label ?? pluginManager.getComponentConfingByType(props.schema.type)?.defaultSchema.label: props.schema.content,
             h('span', { class: 'epic-node-type-text' }, props.schema.type)
           ]
         }

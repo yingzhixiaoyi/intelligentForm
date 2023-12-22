@@ -283,7 +283,7 @@ const pageSchema = {
                           ]
                         },
                         {
-                          "label": "1、今天感觉身体感觉如何？",
+                          "label": "",
                           "type": "text",
                           "field": "text_32linsa0",
                           "icon": "epic-icon-liebiao",
@@ -291,7 +291,8 @@ const pageSchema = {
                           "componentProps": {
                             "size": "h3"
                           },
-                          "id": "text_32linsa0"
+                          "id": "text_32linsa0",
+                          "content": "1、今天感觉身体感觉如何？"
                         },
                         {
                           "label": "舒适状况",
@@ -329,7 +330,7 @@ const pageSchema = {
                           ]
                         },
                         {
-                          "label": "2、今天想吃些什么菜系？",
+                          "label": "",
                           "type": "text",
                           "field": "text_tj0vosa8",
                           "icon": "epic-icon-liebiao",
@@ -337,7 +338,8 @@ const pageSchema = {
                           "componentProps": {
                             "size": "h3"
                           },
-                          "id": "text_tj0vosa8"
+                          "id": "text_tj0vosa8",
+                          "content": "2、今天想吃些什么菜系？"
                         },
                         {
                           "label": "菜系选择",
@@ -374,7 +376,7 @@ const pageSchema = {
                           ]
                         },
                         {
-                          "label": "3、今天几点起床的？",
+                          "label": "",
                           "type": "text",
                           "field": "text_h8r28ku3",
                           "icon": "epic-icon-liebiao",
@@ -382,7 +384,8 @@ const pageSchema = {
                           "componentProps": {
                             "size": "h3"
                           },
-                          "id": "text_h8r28ku3"
+                          "id": "text_h8r28ku3",
+                          "content": "3、今天几点起床的？"
                         },
                         {
                           "label": "选择时间",
@@ -409,7 +412,7 @@ const pageSchema = {
                           ]
                         },
                         {
-                          "label": "4、准备什么时候去复查？",
+                          "label": "",
                           "type": "text",
                           "field": "text_6klafu5q",
                           "icon": "epic-icon-liebiao",
@@ -417,7 +420,8 @@ const pageSchema = {
                           "componentProps": {
                             "size": "h3"
                           },
-                          "id": "text_6klafu5q"
+                          "id": "text_6klafu5q",
+                          "content": "4、准备什么时候去复查？"
                         },
                         {
                           "label": "选择框",
@@ -460,7 +464,7 @@ const pageSchema = {
                           ]
                         },
                         {
-                          "label": "5、评价一下目前的身体状况",
+                          "label": "",
                           "type": "text",
                           "field": "text_mmx0s0vt",
                           "icon": "epic-icon-liebiao",
@@ -468,7 +472,8 @@ const pageSchema = {
                           "componentProps": {
                             "size": "h3"
                           },
-                          "id": "text_mmx0s0vt"
+                          "id": "text_mmx0s0vt",
+                          "content": "5、评价一下目前的身体状况"
                         },
                         {
                           "label": "文本域",
@@ -492,7 +497,7 @@ const pageSchema = {
                           ]
                         },
                         {
-                          "label": "6、对本次服务打分",
+                          "label": "",
                           "type": "text",
                           "field": "text_olszgo2m",
                           "icon": "epic-icon-liebiao",
@@ -500,7 +505,8 @@ const pageSchema = {
                           "componentProps": {
                             "size": "h3"
                           },
-                          "id": "text_olszgo2m"
+                          "id": "text_olszgo2m",
+                          "content": "6、对本次服务打分"
                         },
                         {
                           "label": "评分",
@@ -562,7 +568,8 @@ const pageSchema = {
                       "type": "col",
                       "children": [
                         {
-                          "label": "校验数据",
+                          "label": "",
+                          "content": "校验数据",
                           "type": "button",
                           "field": "button_ldgksvwq",
                           "icon": "epic-icon-button-remove",
@@ -594,7 +601,8 @@ const pageSchema = {
                       "type": "col",
                       "children": [
                         {
-                          "label": "取消验证",
+                          "label": "",
+                          "content": "取消验证",
                           "type": "button",
                           "field": "button_wktrd506",
                           "icon": "epic-icon-button-remove",
@@ -610,9 +618,9 @@ const pageSchema = {
                           "on": {
                             "click": [
                               {
-                                "type": "custom",
+                                "type": "component",
                                 "methodName": "clearValidate",
-                                "componentId": null
+                                "componentId": "form_lm4kbt9h"
                               }
                             ]
                           }
@@ -627,7 +635,8 @@ const pageSchema = {
                       "type": "col",
                       "children": [
                         {
-                          "label": "提交数据",
+                          "label": "",
+                          "content": "提交数据",
                           "type": "button",
                           "field": "button_5so7wa0b",
                           "icon": "epic-icon-button-remove",
@@ -660,7 +669,8 @@ const pageSchema = {
                       "type": "col",
                       "children": [
                         {
-                          "label": "关闭弹窗",
+                          "label": "",
+                          "content": "关闭弹窗",
                           "type": "button",
                           "field": "button_lmr46b7j",
                           "icon": "epic-icon-button-remove",

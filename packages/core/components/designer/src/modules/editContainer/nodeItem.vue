@@ -7,7 +7,7 @@
     <!-- 栅格布局、标签布局暂时不可拖拽设计 end -->
 
     <template v-else #edit-node>
-      <KEditNodeItem v-if="props.schema.children" v-model:schemas="props.schema.children" />
+      <KEditNodeItem v-if="props.schema&&props.schema.children" v-model:schemas="props.schema.children" />
     </template>
   </ENode>
 </template>
@@ -76,6 +76,9 @@ function setCheckedNode(event: Event) {
 }
 
 function setHoverNode(event: Event) {
+  if(!props.schema){
+    return;
+  }
   if (props.schema.type === 'page') return
   event.stopPropagation()
   designer.setHoverNode(props.schema)

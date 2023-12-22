@@ -150,6 +150,9 @@ function init() {
  * @param schema
  */
 async function setCheckedNode(schema: NodeItem = pageSchema.schemas[0]) {
+  if (!schema) {
+    return
+  }
   state.checkedNode = schema
   state.matched = getMatchedById(pageSchema.schemas, schema.id!)
 }

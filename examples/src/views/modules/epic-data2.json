@@ -325,7 +325,8 @@
                       "type": "col",
                       "children": [
                         {
-                          "label": "校验数据",
+                          "label": "",
+                          "content": "校验数据",
                           "type": "button",
                           "field": "button_ldgksvwq",
                           "icon": "epic-icon-button-remove",
@@ -357,7 +358,8 @@
                       "type": "col",
                       "children": [
                         {
-                          "label": "取消验证",
+                          "label": "",
+                          "content": "取消验证",
                           "type": "button",
                           "field": "button_wktrd506",
                           "icon": "epic-icon-button-remove",
@@ -390,7 +392,8 @@
                       "type": "col",
                       "children": [
                         {
-                          "label": "提交数据",
+                          "label": "",
+                          "content": "提交数据",
                           "type": "button",
                           "field": "button_5so7wa0b",
                           "icon": "epic-icon-button-remove",

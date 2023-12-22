@@ -13,7 +13,8 @@ const props = defineProps({
     default: () => ({})
   }
 })
-const pageSchema= inject('pageSchema')
+const pageSchema:any= inject('pageSchema')
+let dataObj=JSON.parse(JSON.stringify(pageSchema))
 
 function getId(arr,record) {
   return arr.findLastIndex(item=>item['id']===record['id'])
@@ -32,6 +33,8 @@ function getItemAddIndex(data,record) {
       itemData['field']=itemData['field']+itemData['sort']
       itemData['id']=itemData['id']+itemData['sort']
       data['children'].splice(findIndex,0,itemData)
+    }else{
+      data['children'].forEach(item=>getItemAddIndex(item,record))
     }
   }
   if(data['schemas']){
@@ -39,7 +42,15 @@ function getItemAddIndex(data,record) {
   }
 }
 function replicationElement() {
-  getItemAddIndex(pageSchema,props.record)
+
+  pageSchema.schemas=[]
+  setTimeout(()=>{
+    getItemAddIndex(dataObj,props.record)
+    for(let key in dataObj){
+      pageSchema[key]=dataObj[key]
+    }
+  },100)
+
 }
 
 </script>

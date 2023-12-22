@@ -5,8 +5,8 @@
       <template #tree-node="{ schema }">
         <div class="text-padding" @mouseenter.stop="designer.setHoverNode(schema)"
           @mouseleave.stop="designer.setHoverNode(null)">
-          {{ schema.label ??
-            pluginManager.getComponentConfingByType(schema.type)?.defaultSchema.label }}<span class="epic-node-type-text">
+          {{schema.label? schema.label ??pluginManager.getComponentConfingByType(schema.type)?.defaultSchema.label:schema.content }}
+          <span class="epic-node-type-text">
             {{ schema.type }}
           </span>
         </div>
