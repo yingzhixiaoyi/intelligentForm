@@ -151,7 +151,7 @@ function changeDisabled(data:any, type:any) {
   if (Object.prototype.toString.call(data) === '[object Array]') {
     data.forEach(item => changeDisabled(item, type))
   } else if (Object.prototype.toString.call(data) === '[object Object]') {
-    if (data['componentProps']&&data['input']) {
+    if (data['componentProps']&&data['canDisabled']) {
       data['componentProps']['disabled'] = type
     }
     if (data['children']) {
