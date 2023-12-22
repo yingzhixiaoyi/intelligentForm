@@ -7,6 +7,7 @@ export default {
     icon: 'epic-icon-image',
     field: 'uploadImage',
     input: true,
+    canDisabled:true,
     componentProps: {
       action: 'https://mock.presstime.cn/mock/6562298755736ae9dfa4646a/epic/upload'
     }
@@ -19,7 +20,7 @@ export default {
         field: 'field'
       },
       {
-        label: '文字',
+        label: "标题",
         type: 'input',
         field: 'label'
       },

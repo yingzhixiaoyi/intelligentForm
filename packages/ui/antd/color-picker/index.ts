@@ -7,6 +7,7 @@ export default {
     field: 'color-picker',
     icon: 'epic-icon-yanse',
     input: true,
+    canDisabled:true,
     componentProps: {
       type: 'color',
       style: {

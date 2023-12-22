@@ -8,6 +8,7 @@ export default {
         field: "input",
         icon: "epic-icon-write",
         input: true,
+        canDisabled:true,
         componentProps: {
             bordered: true,
             placeholder: "请输入",

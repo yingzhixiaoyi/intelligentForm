@@ -3,10 +3,12 @@ export default {
   component:  () => import('./copy.vue'),
   defaultSchema: {
     label: '复制上行',
+    content:'复制上行',
     type: 'Copy',
     field: 'input',
     icon: 'epic-icon-fuzhi3',
-    input: false,
+    input: true,
+    canDisabled:true,
     componentProps: {
     }
   },
@@ -16,6 +18,11 @@ export default {
         label: '标题',
         type: 'input',
         field: 'label'
+      },
+      {
+        label: '内容',
+        type: 'input',
+        field: 'content'
       },
       {
         label: '类型',

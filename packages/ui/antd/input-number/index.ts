@@ -7,6 +7,7 @@ export default {
     icon: "epic-icon-number",
     field: "number",
     input: true,
+    canDisabled:true,
     componentProps: {
       style: { width: "100%" },
       placeholder: "请输入",
@@ -20,7 +21,7 @@ export default {
         field: "field",
       },
       {
-        label: "文字",
+        label: "标题",
         type: "input",
         field: "label",
       },

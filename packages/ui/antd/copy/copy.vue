@@ -1,6 +1,6 @@
 <template>
     <Button v-bind="props.record?.componentProps" :style="`${props.record?.componentProps?.class}`" @click="replicationElement">
-      <slot>{{ props.record?.label }}</slot>
+      <slot>{{ props.record?.content }}</slot>
     </Button>
 </template>
 <script lang="ts" setup>

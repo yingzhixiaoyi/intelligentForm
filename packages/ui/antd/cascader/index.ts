@@ -7,6 +7,7 @@ export default {
     field: 'cascader',
     icon: "epic-icon-guanlian",
     input: true,
+    canDisabled:true,
     componentProps: {
       options: [
         {

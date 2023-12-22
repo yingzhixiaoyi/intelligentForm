@@ -7,6 +7,7 @@ export default {
     icon: 'epic-icon-duoxuan1',
     field: 'checkbox',
     input: true,
+    canDisabled:true,
     componentProps: {
       options: [
         {
@@ -33,7 +34,7 @@ export default {
         field: 'componentProps.defaultValue'
       },
       {
-        label: '文字',
+        label: "标题",
         type: 'input',
         field: 'label'
       },

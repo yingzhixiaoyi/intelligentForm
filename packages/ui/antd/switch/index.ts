@@ -8,6 +8,7 @@ export default {
     icon: "epic-icon-kaiguan3",
     field: "switch",
     input: true,
+    canDisabled:true,
     componentProps: {
       defaultValue:false
     },
@@ -20,7 +21,7 @@ export default {
         field: "field",
       },
       {
-        label: "文字",
+        label: "标题",
         type: "input",
         field: "label",
       },

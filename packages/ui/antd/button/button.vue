@@ -1,6 +1,6 @@
 <template>
-    <Button v-bind="props.record?.componentProps"  class="my-4" :style="`${props.record?.componentProps?.class}`">
-      <slot>{{ props.record?.label }}</slot>
+    <Button v-bind="props.record?.componentProps"  :style="`${props.record?.componentProps?.class}`">
+      <slot>{{ props.record?.content }}</slot>
     </Button>
 </template>
 <script lang="ts" setup>

@@ -6,7 +6,7 @@ export default {
     type: 'button',
     field: 'input',
     icon: 'epic-icon-button-remove',
-    input: false,
+    input: true,
     componentProps: {
     }
   },

@@ -7,6 +7,7 @@ export default {
     icon: 'epic-icon-time',
     field: 'time',
     input: true,
+    canDisabled:true,
     componentProps: {
       valueFormat: 'HH:mm:ss',
       size: 'middle',
@@ -22,7 +23,7 @@ export default {
         field: 'field'
       },
       {
-        label: '文字',
+        label: "标题",
         type: 'input',
         field: 'label'
       },

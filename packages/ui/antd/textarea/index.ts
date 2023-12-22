@@ -7,6 +7,7 @@ export default {
     field: "textarea",
     icon: "epic-icon-edit",
     input: true,
+    canDisabled:true,
     componentProps: {
       placeholder: "请输入",
     },

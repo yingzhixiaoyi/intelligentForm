@@ -8,6 +8,7 @@ export default {
     icon: "epic-icon-mima",
     field: "password",
     input: true,
+    canDisabled:true,
     componentProps: {
       placeholder: "请输入",
       bordered: true,
@@ -21,7 +22,7 @@ export default {
         field: "field",
       },
       {
-        label: "文字",
+        label: "标题",
         type: "input",
         field: "label",
       },

@@ -5,10 +5,11 @@ export default {
     component: () => import("./index.vue"),
     defaultSchema: {
         label: '静态文字',
+        content:'静态文字',
         type: 'text',
         field: "input",
         icon: "epic-icon-liebiao",
-        input: false,
+        input: true,
         componentProps: {
             size: 'h4',
         }
@@ -16,9 +17,14 @@ export default {
     config: {
         attribute: [
             {
+                label: '标题',
+                type: 'input',
+                field: 'label'
+            },
+            {
                 label: "输入静态文字",
                 type: "input",
-                field: "label",
+                field: "content",
             },
             {
                 label: "尺寸",
