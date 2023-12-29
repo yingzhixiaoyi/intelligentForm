@@ -1,6 +1,6 @@
 import { type ComponentConfigModel } from '@justin-intelligent-form/utils'
 export default {
-  component:  () => import('ant-design-vue/lib/checkbox/Group'),
+  component:  () => import('./checkbox.vue'),
   defaultSchema: {
     label: '多选框',
     type: 'checkbox',

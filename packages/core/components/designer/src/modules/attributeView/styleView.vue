@@ -76,7 +76,7 @@ const componentStyles: NodeItem[] = [
       }, 0)
     },
   },
-  {
+/*  {
     label: 'style内容',
     type: 'textarea',
     field: 'componentProps.style',
@@ -84,7 +84,7 @@ const componentStyles: NodeItem[] = [
       defaultValue: '',
       placeholder: '请输入style内容',
     },
-  },
+  },*/
 ]
 
 const checkedNode = computed(() => {

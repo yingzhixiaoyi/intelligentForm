@@ -1,7 +1,7 @@
 import {type ComponentConfigModel} from "@justin-intelligent-form/utils";
 
 export default {
-    component: () => import("ant-design-vue/lib/input"),
+    component: () => import("./input.vue"),
     defaultSchema: {
         label: "输入框",
         type: "input",

@@ -1,32 +1,32 @@
 <template>
-  <div
-    v-if="sidebarComponent"
-    class="epic-right-sidebar"
-  >
-  <EBreadcrumb />
-    <ul class="actions-container">
-      <li
-        v-for="(item, index) in rightSidebars"
-        :key="index"
-        class="action-item"
-        :title="item.title"
-        :class="{ checked: actionBarCheckedIndex === index }"
-        @click="handleClick(item, index)"
-      >
-        {{ item.title }}
-      </li>
-    </ul>
-    <div class="sidebar-content">
-      <aside :class="{ hide: actionBarCheckedIndex === null }">
-        <component :is="sidebarComponent" />
-      </aside>
+    <div
+            v-if="sidebarComponent"
+            class="epic-right-sidebar"
+    >
+        <EBreadcrumb/>
+        <ul class="actions-container">
+            <li
+                    v-for="(item, index) in rightSidebars"
+                    :key="index"
+                    class="action-item"
+                    :title="item.title"
+                    :class="{ checked: actionBarCheckedIndex === index }"
+                    @click="handleClick(item, index)"
+            >
+                {{ item.title }}
+            </li>
+        </ul>
+        <div class="sidebar-content">
+            <aside :class="{ hide: actionBarCheckedIndex === null }">
+                <component :is="sidebarComponent"/>
+            </aside>
+        </div>
     </div>
-  </div>
 </template>
 <script lang="ts" setup>
-import { ref, shallowRef } from 'vue'
-import { pluginManager } from '@justin-intelligent-form/utils'
-import { RightSidebarModel } from '@justin-intelligent-form/utils'
+import {ref, shallowRef} from 'vue'
+import {pluginManager} from '@justin-intelligent-form/utils'
+import {RightSidebarModel} from '@justin-intelligent-form/utils'
 import EBreadcrumb from './breadcrumb.vue'
 
 const rightSidebars = pluginManager.getRightSidebars()
@@ -35,11 +35,11 @@ const actionBarCheckedIndex = ref<number | null>(0)
 const sidebarComponent = shallowRef<any>(null)
 sidebarComponent.value = rightSidebars[0]?.component
 
-function handleClick (item: RightSidebarModel, index: number) {
-  if (actionBarCheckedIndex.value === index) {
-    return false
-  }
-  sidebarComponent.value = item.component
-  actionBarCheckedIndex.value = index
+function handleClick(item: RightSidebarModel, index: number) {
+    if (actionBarCheckedIndex.value === index) {
+        return false
+    }
+    actionBarCheckedIndex.value = index
+    sidebarComponent.value = item.component
 }
 </script>

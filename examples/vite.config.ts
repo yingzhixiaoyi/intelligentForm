@@ -10,4 +10,7 @@ export default defineConfig({
       languageWorkers:['editorWorkerService', 'css', 'html', 'json', 'typescript']
     })
   ],
+  server:{
+    port:8081
+  }
 })
