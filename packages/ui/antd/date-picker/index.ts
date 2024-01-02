@@ -32,6 +32,61 @@ export default {
         field: "componentProps.defaultValue",
       },
       {
+        label: "禁选此前日期",
+        type: "select",
+        componentProps: {
+          placeholder: "请选择范围",
+          allowClear: true,
+          options: [
+            {
+              label: "一日",
+              value: "1",
+            },
+            {
+              label: "一周",
+              value: "7",
+            },
+            {
+              label: "一月",
+              value: "30",
+            },
+            {
+              label: "一年",
+              value: "365",
+            },
+          ],
+        },
+        field: "componentProps.disableBeFor",
+      },
+      {
+        label: "禁选此后日期",
+        type: "select",
+        componentProps: {
+          placeholder: "请选择范围",
+          allowClear: true,
+          options: [
+            {
+              label: "一日",
+              value: "1",
+            },
+            {
+              label: "一周",
+              value: "7",
+            },
+            {
+              label: "一月",
+              value: "30",
+            },
+            {
+              label: "一年",
+              value: "365",
+            },
+          ],
+        },
+        field: "componentProps.disableAfter",
+      },
+
+      {
         label: "尺寸",
         type: "select",
         componentProps: {
