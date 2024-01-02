@@ -1,8 +1,8 @@
 <template>
     <section class="epic-edit-canvas">
         <KEditScreenContainer>
-            <div class="epic-edit-range rounded-md overflow-auto relative" :style="getEditRangestyle">
-                <ENodeItem :schema="rootSchema"/>
+            <div class="epic-edit-range rounded-md overflow-auto relative" :style="getEditRangestyle" v-if="pageSchema.schemas.length">
+                <ENodeItem :schema="rootSchema" />
                 <KPreviewWidgets />
             </div>
         </KEditScreenContainer>
@@ -17,7 +17,7 @@ import { inject, computed } from 'vue'
 
 const pageSchema = inject('pageSchema') as PageSchema
 const rootSchema = computed(() => {
-    return pageSchema.schemas.length? pageSchema.schemas[0]:{}
+    return pageSchema.schemas.length? pageSchema.schemas[0]:{type:'input'}
 })
 
 const getEditRangestyle = computed(() => {
