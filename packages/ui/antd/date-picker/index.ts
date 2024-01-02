@@ -143,19 +143,19 @@ export default {
         componentProps: {
           placeholder: "请输入",
         },
-        show: ({ values }) => values.componentProps.type !== "daterange",
+        show: ({ values }) => values.componentProps&&values.componentProps.type !== "daterange",
       },
       {
         label: "开始占位符",
         type: "input",
         field: "componentProps.placeholder.0",
-        show: ({ values }) => values.componentProps.type === "daterange",
+        show: ({ values }) => values.componentProps&&values.componentProps.type === "daterange",
       },
       {
         label: "结束占位符",
         type: "input",
         field: "componentProps.placeholder.1",
-        show: ({ values }) => values.componentProps.type === "daterange",
+        show: ({ values }) => values.componentProps&&values.componentProps.type === "daterange",
       },
       {
         label: "格式",
